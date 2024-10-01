@@ -1,6 +1,6 @@
 # Tapp Ideas for Top 50 NFTs and Tokens
 
-This list provides 3 simple, easy-to-implement, and useful Tapp (Token Application) ideas for the top 50 NFTs and top 50 tokens on EVM-compatible blockchains. These ideas leverage the ERC-7738 standard for permissionless script registry.
+This list provides 3 simple, easy-to-implement, and useful Tapp (Token as Application) ideas for the top 50 NFTs and top 50 tokens on EVM-compatible blockchains. These ideas leverage the ERC-7738 standard for permissionless script registry.
 
 ## NFT-based Tapps
 
