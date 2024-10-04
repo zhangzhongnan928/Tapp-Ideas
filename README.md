@@ -256,8 +256,8 @@ This list provides 3 simple, easy-to-implement, and useful Tapp (Token as Applic
 
 ## Fungible Token-based Tapps
 
-### 1. Ethereum (ETH)
-- Gas Fee Estimator: Predict gas fees for different transaction types
+### 1. Ethereum (WETH)
+- Wrap/unWrap: Wrap/unWrap ETH via officiial WETH contract
 - ETH Staking Calculator: Estimate returns from staking ETH
 - ETH/Fiat Converter: Real-time currency conversion with historical charts
 
