@@ -16,13 +16,74 @@
         <ts:iconUrl xml:lang="en">https://stepn.com/icon.png</ts:iconUrl>
     </ts:meta>
 
-    <ts:contract interface="erc721" name="STEPNGOSneakerContract">
+    <ts:contract name="STEPNGOSneakerContract">
         <ts:address network="137">0x483EA031160638Ae54a036ac589D9Eb31c121A8C</ts:address>
     </ts:contract>
 
     <ts:origins>
         <ts:ethereum contract="STEPNGOSneakerContract"/>
     </ts:origins>
+
+    <ts:cards>
+        <!-- Buy Card -->
+        <ts:card name="Buy" type="action">
+            <ts:label>
+                <ts:string xml:lang="en">Buy STEPN GO Sneaker</ts:string>
+            </ts:label>
+            <ts:transaction>
+                <ethereum:transaction contract="STEPNGOSneakerContract" function="buy">
+                    <ts:data/>
+                </ethereum:transaction>
+            </ts:transaction>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <style type="text/css">.button { /* styles */ }</style>
+                <button class="button" onclick="tokenscript.action.executeTransaction('Buy')">Buy Sneaker</button>
+            </ts:view>
+        </ts:card>
+
+        <!-- Make an Offer Card -->
+        <ts:card name="MakeOffer" type="action">
+            <ts:label>
+                <ts:string xml:lang="en">Make an Offer</ts:string>
+            </ts:label>
+            <ts:attribute name="amount">
+                <ts:type><ts:syntax>1.3.6.1.4.1.1466.115.121.1.27</ts:syntax></ts:type>
+                <ts:origins>
+                    <ts:user-entry as="uint"/>
+                </ts:origins>
+            </ts:attribute>
+            <ts:transaction>
+                <ethereum:transaction contract="STEPNGOSneakerContract" function="makeOffer">
+                    <ts:data>
+                        <ts:uint256 ref="tokenId"/>
+                        <ts:uint256 local-ref="amount"/>
+                    </ts:data>
+                </ethereum:transaction>
+            </ts:transaction>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <style type="text/css">.button { /* styles */ }</style>
+                <input type="number" id="offerAmount" placeholder="Enter offer amount" />
+                <button class="button" onclick="tokenscript.action.executeTransaction('MakeOffer')">Make Offer</button>
+            </ts:view>
+        </ts:card>
+
+        <!-- Share Card -->
+        <ts:card name="Share" type="action">
+            <ts:label>
+                <ts:string xml:lang="en">Share Sneaker</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <style type="text/css">.button { /* styles */ }</style>
+                <button class="button" onclick="shareSneaker()">Share Sneaker</button>
+                <script type="text/javascript">
+                    function shareSneaker() {
+                        var tlink = "https://viewer.tokenscript.org/?chain=137&contract=0x483EA031160638Ae54a036ac589D9Eb31c121A8C&tokenId=" + tokenscript.token.tokenId;
+                        tokenscript.share.share({ message: "Check out my STEPN GO Sneaker!", url: tlink });
+                    }
+                </script>
+            </ts:view>
+        </ts:card>
+    </ts:cards>
 
     <ts:attribute name="tokenId">
         <ts:type>
@@ -35,81 +96,4 @@
             </ethereum:call>
         </ts:origins>
     </ts:attribute>
-
-    <!-- Buy Card -->
-    <ts:card type="action" name="Buy" origins="STEPNGOSneakerContract">
-        <ts:label>
-            <ts:string xml:lang="en">Buy STEPN GO Sneaker</ts:string>
-        </ts:label>
-        <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-            <style type="text/css">.button { /* styles */ }</style>
-            <div>
-                <button class="button" onclick="buySneaker()">Buy Sneaker</button>
-            </div>
-        </ts:view>
-    </ts:card>
-
-    <!-- Make an Offer Card -->
-    <ts:card type="action" name="MakeOffer" origins="STEPNGOSneakerContract">
-        <ts:label>
-            <ts:string xml:lang="en">Make an Offer</ts:string>
-        </ts:label>
-        <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-            <style type="text/css">.button { /* styles */ }</style>
-            <div>
-                <input type="number" id="offerAmount" placeholder="Enter offer amount" />
-                <button class="button" onclick="makeOffer()">Make Offer</button>
-            </div>
-        </ts:view>
-    </ts:card>
-
-    <!-- Share Card -->
-    <ts:card type="action" name="Share" origins="STEPNGOSneakerContract">
-        <ts:label>
-            <ts:string xml:lang="en">Share Sneaker</ts:string>
-        </ts:label>
-        <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-            <style type="text/css">.button { /* styles */ }</style>
-            <div>
-                <button class="button" onclick="shareSneaker()">Share Sneaker</button>
-            </div>
-        </ts:view>
-    </ts:card>
-
-    <ts:transaction name="buySneaker">
-        <ts:contract>STEPNGOSneakerContract</ts:contract>
-        <ts:function>buy</ts:function>
-    </ts:transaction>
-
-    <ts:transaction name="makeOffer">
-        <ts:contract>STEPNGOSneakerContract</ts:contract>
-        <ts:function>makeOffer</ts:function>
-        <ts:parameter name="amount" ref="amount"/>
-        <ts:parameter name="tokenId" ref="tokenId"/>
-    </ts:transaction>
-
-    <ts:script>
-    <![CDATA[
-    tokenscript.tokens.dataChanged = async (oldTokens, updatedTokens) => {
-        console.log("TokenScript data changed", updatedTokens);
-        if (updatedTokens.currentInstance) {
-            window.tokenId = updatedTokens.currentInstance.tokenId;
-        }
-    };
-
-    function buySneaker() {
-        tokenscript.action.executeTransaction({ txName: "buySneaker" });
-    }
-
-    function makeOffer() {
-        const amount = document.getElementById('offerAmount').value;
-        tokenscript.action.executeTransaction({ txName: "makeOffer", params: { amount: amount } });
-    }
-
-    function shareSneaker() {
-        var tlink = "https://viewer.tokenscript.org/?chain=137&contract=0x483EA031160638Ae54a036ac589D9Eb31c121A8C&tokenId=" + window.tokenId;
-        tokenscript.share.share({ message: "Check out my STEPN GO Sneaker!", url: tlink });
-    }
-    ]]>
-    </ts:script>
 </ts:token>
