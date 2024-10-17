@@ -46,11 +46,6 @@
             <div>
                 <button class="button" onclick="buySneaker()">Buy Sneaker</button>
             </div>
-            <script type="text/javascript">
-                function buySneaker() {
-                    tokenscript.action.executeTransaction({ txName: "buySneaker" });
-                }
-            </script>
         </ts:view>
     </ts:card>
 
@@ -65,12 +60,6 @@
                 <input type="number" id="offerAmount" placeholder="Enter offer amount" />
                 <button class="button" onclick="makeOffer()">Make Offer</button>
             </div>
-            <script type="text/javascript">
-                function makeOffer() {
-                    const amount = document.getElementById('offerAmount').value;
-                    tokenscript.action.executeTransaction({ txName: "makeOffer", params: { amount: amount } });
-                }
-            </script>
         </ts:view>
     </ts:card>
 
@@ -84,12 +73,6 @@
             <div>
                 <button class="button" onclick="shareSneaker()">Share Sneaker</button>
             </div>
-            <script type="text/javascript">
-                function shareSneaker() {
-                    var tlink = "https://viewer.tokenscript.org/?chain=137&contract=0x483EA031160638Ae54a036ac589D9Eb31c121A8C&tokenId=" + window.tokenId;
-                    tokenscript.share.share({ message: "Check out my STEPN GO Sneaker!", url: tlink });
-                }
-            </script>
         </ts:view>
     </ts:card>
 
@@ -113,6 +96,20 @@
             window.tokenId = updatedTokens.currentInstance.tokenId;
         }
     };
+
+    function buySneaker() {
+        tokenscript.action.executeTransaction({ txName: "buySneaker" });
+    }
+
+    function makeOffer() {
+        const amount = document.getElementById('offerAmount').value;
+        tokenscript.action.executeTransaction({ txName: "makeOffer", params: { amount: amount } });
+    }
+
+    function shareSneaker() {
+        var tlink = "https://viewer.tokenscript.org/?chain=137&contract=0x483EA031160638Ae54a036ac589D9Eb31c121A8C&tokenId=" + window.tokenId;
+        tokenscript.share.share({ message: "Check out my STEPN GO Sneaker!", url: tlink });
+    }
     ]]>
     </ts:script>
 </ts:token>
