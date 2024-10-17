@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ts:token xmlns:ts="http://tokenscript.org/2024/01/tokenscript"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:ethereum="urn:ethereum:constantinople"
+          xsi:schemaLocation="http://tokenscript.org/2024/01/tokenscript https://www.tokenscript.org/schemas/2024-01/tokenscript.xsd"
+          name="MorchiNFT">
+    <ts:label>
+        <ts:plurals xml:lang="en">
+            <ts:string quantity="one">Morchi NFT</ts:string>
+            <ts:string quantity="other">Morchi NFTs</ts:string>
+        </ts:plurals>
+    </ts:label>
+    <ts:meta>
+        <ts:description xml:lang="en">Morchi NFT - Collect, Power Up, and Share!</ts:description>
+        <ts:aboutUrl xml:lang="en">https://morchi-nft.example.com/</ts:aboutUrl>
+        <ts:iconUrl xml:lang="en">https://morchi-nft.example.com/icon.png</ts:iconUrl>
+    </ts:meta>
+
+    <ts:contract interface="erc721" name="MorchiNFTContract">
+        <ts:address network="137">0xB48f53010Acbc0E24D3D12D892E2215879e6fD13</ts:address>
+    </ts:contract>
+
+    <ts:origins>
+        <ts:ethereum contract="MorchiNFTContract"/>
+    </ts:origins>
+
+    <ts:cards>
+        <ts:card type="action" name="Buy">
+            <ts:label>
+                <ts:string xml:lang="en">Buy Morchi NFT</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <style type="text/css">.button { /* 样式 */ }</style>
+                <div>
+                    <button class="button" onclick="buyNFT()">Buy NFT</button>
+                </div>
+            </ts:view>
+            <ts:transaction>
+                <ethereum:transaction function="mint" contract="MorchiNFTContract" as="uint"/>
+            </ts:transaction>
+        </ts:card>
+
+        <ts:card type="action" name="PowerUp">
+            <ts:label>
+                <ts:string xml:lang="en">Power Up / Like</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <style type="text/css">.button { /* 样式 */ }</style>
+                <div>
+                    <button class="button" onclick="powerUp()">Power Up</button>
+                </div>
+            </ts:view>
+            <ts:transaction>
+                <ethereum:transaction function="powerUp" contract="MorchiNFTContract" as="uint">
+                    <ethereum:data>
+                        <ethereum:uint256 ref="tokenId"/>
+                    </ethereum:data>
+                </ethereum:transaction>
+            </ts:transaction>
+        </ts:card>
+
+        <ts:card type="action" name="ShareToEarn">
+            <ts:label>
+                <ts:string xml:lang="en">Share to Earn</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <style type="text/css">.button { /* 样式 */ }</style>
+                <div>
+                    <button class="button" onclick="shareNFT()">Share NFT</button>
+                </div>
+            </ts:view>
+        </ts:card>
+    </ts:cards>
+
+    <ts:attribute name="tokenId">
+        <ts:type>
+            <ts:syntax>1.3.6.1.4.1.1466.115.121.1.27</ts:syntax>
+        </ts:type>
+        <ts:origins>
+            <ethereum:call function="tokenOfOwnerByIndex" contract="MorchiNFTContract" as="uint256">
+                <ethereum:parameter name="owner" ref="ownerAddress"/>
+                <ethereum:parameter name="index">0</ethereum:parameter>
+            </ethereum:call>
+        </ts:origins>
+    </ts:attribute>
+
+    <ts:script>
+    <![CDATA[
+    tokenscript.tokens.dataChanged = async (oldTokens, updatedTokens) => {
+        console.log("TokenScript data changed", updatedTokens);
+        if (updatedTokens.currentInstance) {
+            window.tokenId = updatedTokens.currentInstance.tokenId;
+        }
+    };
+
+    function buyNFT() {
+        tokenscript.action.executeTransaction({ txName: "buyNFT" });
+    }
+
+    function powerUp() {
+        tokenscript.action.executeTransaction({ txName: "powerUp" });
+    }
+
+    function shareNFT() {
+        var tlink = "https://viewer.tokenscript.org/?chain=137&contract=0xB48f53010Acbc0E24D3D12D892E2215879e6fD13&tokenId=" + window.tokenId;
+        tokenscript.share.share({ message: "Check out my Morchi NFT!", url: tlink });
+    }
+    ]]>
+    </ts:script>
+</ts:token>
