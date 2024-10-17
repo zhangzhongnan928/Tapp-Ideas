@@ -77,7 +77,7 @@
                 <button class="button" onclick="shareSneaker()">Share Sneaker</button>
                 <script type="text/javascript">
                     function shareSneaker() {
-                        var tlink = "https://viewer.tokenscript.org/?chain=137&contract=0x483EA031160638Ae54a036ac589D9Eb31c121A8C&tokenId=" + tokenscript.token.tokenId;
+                        var tlink = "https://viewer.tokenscript.org/?chain=137&amp;contract=0x483EA031160638Ae54a036ac589D9Eb31c121A8C&amp;tokenId=" + tokenscript.token.tokenId;
                         tokenscript.share.share({ message: "Check out my STEPN GO Sneaker!", url: tlink });
                     }
                 </script>
