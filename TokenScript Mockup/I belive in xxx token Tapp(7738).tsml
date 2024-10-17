@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ts:token xmlns:ts="http://tokenscript.org/2024/01/tokenscript"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:ethereum="urn:ethereum:constantinople"
+          xsi:schemaLocation="http://tokenscript.org/2024/01/tokenscript https://www.tokenscript.org/schemas/2024-01/tokenscript.xsd"
+          name="Degen">
+    <ts:label>
+        <ts:plurals xml:lang="en">
+            <ts:string quantity="one">Degen Token</ts:string>
+            <ts:string quantity="other">Degen Tokens</ts:string>
+        </ts:plurals>
+    </ts:label>
+    <ts:meta>
+        <ts:description xml:lang="en">Degen Token - The ERC20 token for degens on Base</ts:description>
+        <ts:aboutUrl xml:lang="en">https://degen.example.com/</ts:aboutUrl>
+        <ts:iconUrl xml:lang="en">https://degen.example.com/icon.png</ts:iconUrl>
+    </ts:meta>
+
+    <ts:contract interface="erc20" name="DegenTokenContract">
+        <ts:address network="8453">0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed</ts:address>
+    </ts:contract>
+
+    <ts:origins>
+        <ts:ethereum contract="DegenTokenContract"/>
+    </ts:origins>
+
+    <!-- Buy $1 Card -->
+    <ts:card type="action" name="Buy" origins="DegenTokenContract">
+        <ts:label>
+            <ts:string xml:lang="en">Buy $1 of Degen</ts:string>
+        </ts:label>
+        <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+            <style type="text/css">.button { /* styles */ }</style>
+            <div>
+                <button class="button" onclick="buyDegen()">Buy $1 of Degen</button>
+            </div>
+            <script type="text/javascript">
+                function buyDegen() {
+                    tokenscript.action.executeTransaction({ txName: "buyDegen" });
+                }
+            </script>
+        </ts:view>
+    </ts:card>
+
+    <!-- Watch on CoinGecko Card -->
+    <ts:card type="action" name="WatchOnCoinGecko" origins="DegenTokenContract">
+        <ts:label>
+            <ts:string xml:lang="en">Watch on CoinGecko</ts:string>
+        </ts:label>
+        <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+            <style type="text/css">.button { /* styles */ }</style>
+            <div>
+                <button class="button" onclick="watchOnCoinGecko()">Watch on CoinGecko</button>
+            </div>
+            <script type="text/javascript">
+                function watchOnCoinGecko() {
+                    window.open('https://www.coingecko.com/en/coins/degen', '_blank');
+                }
+            </script>
+        </ts:view>
+    </ts:card>
+
+    <!-- Share Your Token Card -->
+    <ts:card type="action" name="ShareToken" origins="DegenTokenContract">
+        <ts:label>
+            <ts:string xml:lang="en">Share Your Token</ts:string>
+        </ts:label>
+        <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+            <style type="text/css">.button { /* styles */ }</style>
+            <div>
+                <button class="button" onclick="shareToken()">Share Your Token</button>
+            </div>
+            <script type="text/javascript">
+                function shareToken() {
+                    var tlink = "https://viewer.tokenscript.org/?chain=8453&amp;contract=0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed";
+                    tokenscript.share.share({ message: "Check out my Degen Token on Base!", url: tlink });
+                }
+            </script>
+        </ts:view>
+    </ts:card>
+
+    <ts:transaction name="buyDegen">
+        <ts:contract>DegenTokenContract</ts:contract>
+        <ts:function>buy</ts:function>
+        <ts:parameter name="amount">1000000000000000000</ts:parameter> <!-- 1 USD worth of tokens, adjust as needed -->
+    </ts:transaction>
+
+    <ts:attribute name="balance">
+        <ts:type>
+            <ts:syntax>1.3.6.1.4.1.1466.115.121.1.36</ts:syntax>
+        </ts:type>
+        <ts:label>
+            <ts:string xml:lang="en">Balance</ts:string>
+        </ts:label>
+        <ts:origins>
+            <ethereum:call function="balanceOf" contract="DegenTokenContract" as="uint">
+                <ethereum:parameter name="owner" ref="ownerAddress"/>
+            </ethereum:call>
+        </ts:origins>
+    </ts:attribute>
+
+    <ts:script>
+    <![CDATA[
+    tokenscript.tokens.dataChanged = async (oldTokens, updatedTokens) => {
+        console.log("TokenScript data changed", updatedTokens);
+    };
+    ]]>
+    </ts:script>
+</ts:token>
