@@ -1,0 +1,78 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<TokenScript xmlns="http://tokenscript.org/2020/06/tokenscript" xmlns:ts="http://tokenscript.org/2020/06/tokenscript">
+    <ts:template>
+        <ts:script>
+            <ts:token id="prediction-nft" interface="erc721" contract="0x68517Af9E75A88934E6057f0AAA86e003505d5C0" chain="8453">
+                <!-- Prediction Owner Details -->
+                <ts:attribute-type id="prediction-owner">
+                    <ts:name>Prediction Owner</ts:name>
+                    <ts:description>This user is the owner of the Prediction NFT Tapp</ts:description>
+                </ts:attribute-type>
+                
+                <!-- Betting Options -->
+                <ts:attribute-type id="bet-yes">
+                    <ts:name>Bet Yes</ts:name>
+                    <ts:description>Bet $1 on Yes</ts:description>
+                    <ts:action>
+                        <ts:on-click function="betYes()"/>
+                    </ts:action>
+                </ts:attribute-type>
+
+                <ts:attribute-type id="bet-no">
+                    <ts:name>Bet No</ts:name>
+                    <ts:description>Bet $1 on No</ts:description>
+                    <ts:action>
+                        <ts:on-click function="betNo()"/>
+                    </ts:action>
+                </ts:attribute-type>
+
+                <!-- Show Current Bets -->
+                <ts:attribute-type id="current-bets">
+                    <ts:name>Current Bets</ts:name>
+                    <ts:description>Display current bets for Yes and No options.</ts:description>
+                    <ts:script>
+                        <ts:value function="getCurrentBets()" />
+                    </ts:script>
+                </ts:attribute-type>
+
+                <!-- Share Prediction -->
+                <ts:attribute-type id="share-prediction">
+                    <ts:name>Share Prediction</ts:name>
+                    <ts:description>Share the prediction to earn from referral bets</ts:description>
+                    <ts:action>
+                        <ts:on-click function="sharePrediction()"/>
+                    </ts:action>
+                </ts:attribute-type>
+
+                <!-- Withdraw Winnings -->
+                <ts:attribute-type id="withdraw-winnings">
+                    <ts:name>Withdraw Winnings</ts:name>
+                    <ts:description>Withdraw your winnings from the prediction market</ts:description>
+                    <ts:action>
+                        <ts:on-click function="withdrawWinnings()"/>
+                    </ts:action>
+                </ts:attribute-type>
+
+                <!-- Result Handling -->
+                <ts:attribute-type id="prediction-result">
+                    <ts:name>Prediction Result</ts:name>
+                    <ts:description>Displays the outcome of the prediction.</ts:description>
+                    <ts:script>
+                        <ts:value function="loadPredictionResult()" />
+                    </ts:script>
+                </ts:attribute-type>
+
+                <!-- Distribute Winnings Based on Result -->
+                <ts:attribute-type id="distribute-winnings">
+                    <ts:name>Distribute Winnings</ts:name>
+                    <ts:description>Distribute winnings to the winning side after the result.</ts:description>
+                    <ts:action>
+                        <ts:on-click function="distributeWinnings()" />
+                    </ts:action>
+                </ts:attribute-type>
+
+            </ts:token>
+        </ts:script>
+    </ts:template>
+</TokenScript>
