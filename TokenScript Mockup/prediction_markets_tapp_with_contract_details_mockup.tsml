@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ts:token xmlns:ts="http://tokenscript.org/2024/01/tokenscript"
+          xmlns:ethereum="urn:ethereum:constantinople"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://tokenscript.org/2024/01/tokenscript https://www.tokenscript.org/schemas/2024-01/tokenscript.xsd"
+          name="PredictionMarket">
+    <ts:label>
+        <ts:plurals xml:lang="en">
+            <ts:string quantity="one">Prediction Market</ts:string>
+            <ts:string quantity="other">Prediction Markets</ts:string>
+        </ts:plurals>
+    </ts:label>
+
+    <ts:contract interface="erc721" name="PredictionNFT">
+        <ts:address network="8453">0x68517Af9E75A88934E6057f0AAA86e003505d5C0</ts:address>
+    </ts:contract>
+
+    <ts:origins>
+        <ts:ethereum contract="PredictionNFT"/>
+    </ts:origins>
+
+    <ts:cards>
+        <ts:card type="action" name="BetYes" origins="PredictionNFT">
+            <ts:label>
+                <ts:string xml:lang="en">Bet Yes</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <style type="text/css">.button { /* styles */ }</style>
+                <div>
+                    <button class="button" onclick="betYes()">Bet $1 on Yes</button>
+                </div>
+                <script type="text/javascript">
+                    function betYes() {
+                        tokenscript.action.executeTransaction({ txName: "betYes" });
+                    }
+                </script>
+            </ts:view>
+        </ts:card>
+
+        <ts:card type="action" name="BetNo" origins="PredictionNFT">
+            <ts:label>
+                <ts:string xml:lang="en">Bet No</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <style type="text/css">.button { /* styles */ }</style>
+                <div>
+                    <button class="button" onclick="betNo()">Bet $1 on No</button>
+                </div>
+                <script type="text/javascript">
+                    function betNo() {
+                        tokenscript.action.executeTransaction({ txName: "betNo" });
+                    }
+                </script>
+            </ts:view>
+        </ts:card>
+
+        <ts:card type="action" name="SharePrediction" origins="PredictionNFT">
+            <ts:label>
+                <ts:string xml:lang="en">Share Prediction</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <style type="text/css">.button { /* styles */ }</style>
+                <div>
+                    <button class="button" onclick="sharePrediction()">Share Prediction</button>
+                </div>
+                <script type="text/javascript">
+                    function sharePrediction() {
+                        var tlink = "https://viewer.tokenscript.org/?chain=8453&amp;contract=0x68517Af9E75A88934E6057f0AAA86e003505d5C0&amp;tokenId=" + window.tokenId;
+                        tokenscript.share.share({ message: "Check out my prediction!", url: tlink });
+                    }
+                </script>
+            </ts:view>
+        </ts:card>
+    </ts:cards>
+
+    <ts:attribute name="currentBets">
+        <ts:type>
+            <ts:syntax>1.3.6.1.4.1.1466.115.121.1.15</ts:syntax>
+        </ts:type>
+        <ts:label>
+            <ts:string xml:lang="en">Current Bets</ts:string>
+        </ts:label>
+        <ts:origins>
+            <ethereum:call function="getCurrentBets" contract="PredictionNFT" as="string">
+                <ethereum:data>
+                    <ethereum:uint256 ref="tokenId"/>
+                </ethereum:data>
+            </ethereum:call>
+        </ts:origins>
+    </ts:attribute>
+
+    <ts:transaction name="betYes">
+        <ts:contract>PredictionNFT</ts:contract>
+        <ts:function>betYes</ts:function>
+    </ts:transaction>
+
+    <ts:transaction name="betNo">
+        <ts:contract>PredictionNFT</ts:contract>
+        <ts:function>betNo</ts:function>
+    </ts:transaction>
+
+    <ts:transaction name="placeBet">
+        <ts:contract>PredictionMarketContract</ts:contract>
+        <ts:function>placeBet</ts:function>
+        <ts:parameter name="choice" type="string"/>
+    </ts:transaction>
+
+    <ts:script>
+    <![CDATA[
+    tokenscript.tokens.dataChanged = async (oldTokens, updatedTokens) => {
+        console.log("TokenScript data changed", updatedTokens);
+        if (updatedTokens.currentInstance) {
+            window.tokenId = updatedTokens.currentInstance.tokenId;
+        }
+    };
+    ]]>
+    </ts:script>
+</ts:token>
