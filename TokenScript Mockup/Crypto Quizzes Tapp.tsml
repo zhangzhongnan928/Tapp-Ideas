@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ts:token xmlns:ts="http://tokenscript.org/2024/01/tokenscript"
+          xmlns:ethereum="urn:ethereum:constantinople"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://tokenscript.org/2024/01/tokenscript https://www.tokenscript.org/schemas/2024-01/tokenscript.xsd"
+          name="CryptoQuizzes">
+    <ts:label>
+        <ts:plurals xml:lang="en">
+            <ts:string quantity="one">Crypto Quiz</ts:string>
+            <ts:string quantity="other">Crypto Quizzes</ts:string>
+        </ts:plurals>
+    </ts:label>
+
+    <ts:contract interface="erc721" name="CryptoQuizNFT">
+        <ts:address network="8453">0x6F418b21aabe625192577De7720b4D27297Beb92</ts:address>
+    </ts:contract>
+
+    <ts:origins>
+        <ts:ethereum contract="CryptoQuizNFT"/>
+    </ts:origins>
+
+    <ts:cards>
+        <ts:card type="action" name="AnswerQuiz" origins="CryptoQuizNFT">
+            <ts:label>
+                <ts:string xml:lang="en">Answer to Earn</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <style type="text/css">
+                    .button { padding: 10px; margin: 5px; cursor: pointer; }
+                    #quizQuestion { font-weight: bold; margin-bottom: 10px; }
+                    #answerOptions { display: flex; flex-direction: column; }
+                </style>
+                <div>
+                    <p id="quizQuestion"></p>
+                    <div id="answerOptions"></div>
+                    <button class="button" onclick="submitAnswer()">Submit Answer</button>
+                </div>
+                <script type="text/javascript">
+                    function loadQuiz() {
+                        tokenscript.action.executeTransaction({ txName: "getQuizDetails" }, (result) => {
+                            document.getElementById('quizQuestion').innerText = result.question;
+                            const options = JSON.parse(result.options);
+                            const optionsDiv = document.getElementById('answerOptions');
+                            options.forEach((option, index) => {
+                                const button = document.createElement('button');
+                                button.innerText = option;
+                                button.onclick = () => selectAnswer(index);
+                                button.className = 'button';
+                                optionsDiv.appendChild(button);
+                            });
+                        });
+                    }
+
+                    let selectedAnswerIndex = -1;
+                    function selectAnswer(index) {
+                        selectedAnswerIndex = index;
+                        const buttons = document.querySelectorAll('#answerOptions .button');
+                        buttons.forEach((btn, idx) => {
+                            btn.style.backgroundColor = idx === index ? '#4CAF50' : '';
+                        });
+                    }
+
+                    function submitAnswer() {
+                        if (selectedAnswerIndex === -1) {
+                            alert('Please select an answer');
+                            return;
+                        }
+                        tokenscript.action.executeTransaction({ 
+                            txName: "submitAnswer", 
+                            params: { answerIndex: selectedAnswerIndex }
+                        });
+                    }
+
+                    loadQuiz();
+                </script>
+            </ts:view>
+        </ts:card>
+
+        <ts:card type="action" name="ShareQuiz" origins="CryptoQuizNFT">
+            <ts:label>
+                <ts:string xml:lang="en">Share to Earn</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <style type="text/css">
+                    .button { padding: 10px; margin: 5px; cursor: pointer; }
+                </style>
+                <div>
+                    <button class="button" onclick="shareQuiz()">Share Quiz</button>
+                </div>
+                <script type="text/javascript">
+                    function shareQuiz() {
+                        const tlink = "https://viewer.tokenscript.org/?chain=8453&amp;contract=0x6F418b21aabe625192577De7720b4D27297Beb92&amp;tokenId=" + window.tokenId;
+                        tokenscript.share.share({ 
+                            message: "Check out this Crypto Quiz and earn rewards!", 
+                            url: tlink 
+                        });
+                    }
+                </script>
+            </ts:view>
+        </ts:card>
+
+        <ts:card type="action" name="GetHint" origins="CryptoQuizNFT">
+            <ts:label>
+                <ts:string xml:lang="en">Get Hint</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <style type="text/css">
+                    .button { padding: 10px; margin: 5px; cursor: pointer; }
+                    #hintText { margin-top: 10px; font-style: italic; }
+                </style>
+                <div>
+                    <button class="button" onclick="getHint()">Get Hint</button>
+                    <p id="hintText"></p>
+                </div>
+                <script type="text/javascript">
+                    function getHint() {
+                        tokenscript.action.executeTransaction({ txName: "getHint" }, (result) => {
+                            document.getElementById('hintText').innerText = result.hint;
+                        });
+                    }
+                </script>
+            </ts:view>
+        </ts:card>
+    </ts:cards>
+
+    <ts:attribute name="quizDetails">
+        <ts:type>
+            <ts:syntax>1.3.6.1.4.1.1466.115.121.1.15</ts:syntax>
+        </ts:type>
+        <ts:label>
+            <ts:string xml:lang="en">Quiz Details</ts:string>
+        </ts:label>
+        <ts:origins>
+            <ethereum:call function="getQuizDetails" contract="CryptoQuizNFT" as="json">
+                <ethereum:data>
+                    <ethereum:uint256 ref="tokenId"/>
+                </ethereum:data>
+            </ethereum:call>
+        </ts:origins>
+    </ts:attribute>
+
+    <ts:transaction name="getQuizDetails">
+        <ts:contract>CryptoQuizNFT</ts:contract>
+        <ts:function>getQuizDetails</ts:function>
+    </ts:transaction>
+
+    <ts:transaction name="submitAnswer">
+        <ts:contract>CryptoQuizNFT</ts:contract>
+        <ts:function>submitAnswer</ts:function>
+        <ts:parameter name="answerIndex" type="uint256"/>
+    </ts:transaction>
+
+    <ts:transaction name="getHint">
+        <ts:contract>CryptoQuizNFT</ts:contract>
+        <ts:function>getHint</ts:function>
+    </ts:transaction>
+
+    <ts:script>
+    <![CDATA[
+    tokenscript.tokens.dataChanged = async (oldTokens, updatedTokens) => {
+        console.log("TokenScript data changed", updatedTokens);
+        if (updatedTokens.currentInstance) {
+            window.tokenId = updatedTokens.currentInstance.tokenId;
+        }
+    };
+    ]]>
+    </ts:script>
+</ts:token>
