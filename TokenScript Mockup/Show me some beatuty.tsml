@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ts:token xmlns:ts="http://tokenscript.org/2024/01/tokenscript"
+          xmlns:ethereum="urn:ethereum:constantinople"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://tokenscript.org/2024/01/tokenscript https://www.tokenscript.org/schemas/2024-01/tokenscript.xsd"
+          name="AIModelNFT">
+    <ts:label>
+        <ts:plurals xml:lang="en">
+            <ts:string quantity="one">AI Model NFT</ts:string>
+            <ts:string quantity="other">AI Model NFTs</ts:string>
+        </ts:plurals>
+    </ts:label>
+
+    <ts:contract interface="erc721" name="AIModelNFTContract">
+        <ts:address network="8453">0x6FDA137a05BE2e31B0C8516605a6E27e7F7BA18d</ts:address>
+    </ts:contract>
+
+    <ts:origins>
+        <ts:ethereum contract="AIModelNFTContract"/>
+    </ts:origins>
+
+    <ts:cards>
+        <ts:card type="action" name="ShowMore">
+            <ts:label>
+                <ts:string xml:lang="en">$ Show me more</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <style type="text/css">
+                    .button { padding: 10px; margin: 5px; cursor: pointer; }
+                    #imageContainer { width: 300px; height: 300px; border: 1px solid #ccc; margin: 10px 0; }
+                </style>
+                <div>
+                    <div id="imageContainer"></div>
+                    <button class="button" onclick="generateImage()">$ Show me more</button>
+                </div>
+                <script type="text/javascript">
+                    function generateImage() {
+                        tokenscript.action.executeTransaction({ 
+                            txName: "generateImage",
+                            params: { payment: "0.01" } // 1 cent in USD
+                        }, function(result) {
+                            if (result.success) {
+                                document.getElementById('imageContainer').innerHTML = '&lt;img src="' + result.imageUrl + '" alt="Generated Image" style="max-width: 100%; max-height: 100%;"&gt;';
+                            } else {
+                                alert("Failed to generate image. Please try again.");
+                            }
+                        });
+                    }
+                </script>
+            </ts:view>
+        </ts:card>
+
+        <ts:card type="action" name="ShareToEarn">
+            <ts:label>
+                <ts:string xml:lang="en">Share to earn $</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <style type="text/css">
+                    .button { padding: 10px; margin: 5px; cursor: pointer; }
+                    #shareLink { margin-top: 10px; word-break: break-all; }
+                </style>
+                <div>
+                    <button class="button" onclick="shareToEarn()">Share to earn $</button>
+                    <p id="shareLink"></p>
+                </div>
+                <script type="text/javascript">
+                    function shareToEarn() {
+                        var baseUrl = "https://viewer.tokenscript.org/";
+                        var tlink = baseUrl + "?chain=8453&amp;contract=0x6FDA137a05BE2e31B0C8516605a6E27e7F7BA18d&amp;tokenId=" + window.tokenId;
+                        
+                        document.getElementById('shareLink').innerText = tlink;
+                        
+                        tokenscript.share.share({ 
+                            message: "Check out this AI-generated image and earn!", 
+                            url: tlink 
+                        });
+                    }
+                </script>
+            </ts:view>
+        </ts:card>
+    </ts:cards>
+
+    <ts:attribute name="modelDetails">
+        <ts:type>
+            <ts:syntax>1.3.6.1.4.1.1466.115.121.1.15</ts:syntax>
+        </ts:type>
+        <ts:label>
+            <ts:string xml:lang="en">AI Model Details</ts:string>
+        </ts:label>
+        <ts:origins>
+            <ethereum:call function="getModelDetails" contract="AIModelNFTContract" as="json">
+                <ethereum:data>
+                    <ethereum:uint256 ref="tokenId"/>
+                </ethereum:data>
+            </ethereum:call>
+        </ts:origins>
+    </ts:attribute>
+
+    <ts:transaction name="generateImage">
+        <ts:contract>AIModelNFTContract</ts:contract>
+        <ts:function>generateImage</ts:function>
+        <ts:parameter name="payment" type="uint256"/>
+    </ts:transaction>
+
+    <ts:script>
+    <![CDATA[
+    tokenscript.tokens.dataChanged = async function(oldTokens, updatedTokens) {
+        console.log("TokenScript data changed", updatedTokens);
+        if (updatedTokens.currentInstance) {
+            window.tokenId = updatedTokens.currentInstance.tokenId;
+        }
+    };
+    ]]>
+    </ts:script>
+</ts:token>
