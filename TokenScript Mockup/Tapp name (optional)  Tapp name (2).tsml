@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ts:token xmlns:ts="http://tokenscript.org/2024/01/tokenscript"
+          xmlns:xml="http://www.w3.org/XML/1998/namespace"
+          xsi:schemaLocation="http://tokenscript.org/2024/01/tokenscript https://www.tokenscript.org/schemas/2024-01/tokenscript.xsd"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:ethereum="urn:ethereum:constantinople"
+          name="Tapp name (optional)  Tapp name">
+    <ts:label>
+        <ts:plurals xml:lang="en">
+            <ts:string quantity="one">Tapp singular name (optional)  Singular name</ts:string>
+            <ts:string quantity="other">Tapp singular name (optional)  Singular names</ts:string>
+        </ts:plurals>
+    </ts:label>
+    <ts:meta>
+        <ts:description xml:lang="en">Tapp description (optional) 
+Description
+</ts:description>
+        <ts:aboutUrl xml:lang="en">tapp.com</ts:aboutUrl>
+        <ts:iconUrl xml:lang="en">tapp.com/icon.png</ts:iconUrl>
+    </ts:meta>
+    <ts:contract interface="erc20" name="Contract name (optional)  Contract name">
+        <ts:address network="8453">0x4ed4E862860beD51a9570b96d89aF5E1B0Efefed</ts:address>
+    </ts:contract>
+    <ts:origins>
+        <ts:ethereum contract="Contract name (optional)  Contract name"/>
+    </ts:origins>
+    <ts:cards>
+        <ts:card type="action" name="Function">
+            <ts:label>
+                <ts:string xml:lang="en">Function</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>Function</button>
+            </ts:view>
+        </ts:card>
+        <ts:card type="action" name="card">
+            <ts:label>
+                <ts:string xml:lang="en">card</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>card</button>
+            </ts:view>
+        </ts:card>
+        <ts:card type="action" name="Names">
+            <ts:label>
+                <ts:string xml:lang="en">Names</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>Names</button>
+            </ts:view>
+        </ts:card></ts:cards>
+    <ts:attribute-types>
+        <ts:attribute-type id="decimals" syntax="1.3.6.1.4.1.1466.115.121.1.36">
+            <ts:name>
+                <ts:string xml:lang="en">decimals</ts:string>
+            </ts:name>
+            <ts:origins>
+                <ethereum:call function="decimals" contract="Contract name (optional)  Contract name" as="uint"/>
+            </ts:origins>
+        </ts:attribute-type>
+        <ts:attribute-type id="symbol" syntax="1.3.6.1.4.1.1466.115.121.1.26">
+            <ts:name>
+                <ts:string xml:lang="en">symbol</ts:string>
+            </ts:name>
+            <ts:origins>
+                <ethereum:call function="symbol" contract="Contract name (optional)  Contract name" as="utf8"/>
+            </ts:origins>
+        </ts:attribute-type>
+    </ts:attribute-types>
+</ts:token>
