@@ -8,9 +8,8 @@
 - Open **Tapp Product Manager** by visiting [this link](https://chatgpt.com/g/g-jnlADIWqZ-tapp-product-manager) to brainstorm your tapp idea.
   - Example: You can create a tapp that sell your NFTs/token on Twitter.
 
-## 3. Request the TokenScript Mockup
-- After finalizing your tapp idea, request a **TokenScript mockup** from Tapp Product Manager.
-  - This mockup will contain the necessary logic and user interface for your tapp, encapsulated in a TokenScript file.
+## 3. Generate the TokenScript Mockup
+- Can use TokenScript Mockup Generator.html
 
 ## 4. Test the TokenScript File in TokenScript Viewer
 - Open [TokenScript Viewer](https://viewer.tokenscript.org/).
