@@ -9,7 +9,7 @@
   - Example: You can create a tapp that sell your NFTs/token on Twitter.
 
 ## 3. Generate the TokenScript Mockup
-- Can use TokenScript Mockup Generator.html
+- Can use [TokenScript Mockup Generator](https://tokenscriptmockupgenerator.tiiny.site/)
 
 ## 4. Test the TokenScript File in TokenScript Viewer
 - Open [TokenScript Viewer](https://viewer.tokenscript.org/).
