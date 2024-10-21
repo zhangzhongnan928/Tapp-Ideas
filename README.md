@@ -1,15 +1,25 @@
 
-# Step-by-Step Guide to Build a Tapp for an Existing Token/NFT in 5 Minutes
+# Step-by-Step Guide to Build a Tapp Mockup for an Existing Token/NFT in 5 Minutes
 
 ## 1. Choose an Existing Token/NFT
 - **Identify the token/NFT** you want to build a tapp for. It can be any token you own or want to interact with (e.g., an ERC-721 NFT or ERC-20 token).
 
 ## 2. Discuss Your Tapp Idea
-- Open **Tapp Product Manager** by visiting [this link](https://chatgpt.com/g/g-jnlADIWqZ-tapp-product-manager) to brainstorm your tapp idea.
+a NFT(like ERC721) tapp will be look like this on twitter 
+<img width="663" alt="Screenshot 2024-10-17 at 2 52 27 pm" src="https://github.com/user-attachments/assets/0d6e427b-538d-4fc4-95c9-6952068a175d">
+
+a Fungible token(like ERC20) tapp will be look like this on twitter
+<img width="837" alt="Screenshot 2024-10-17 at 2 35 08 pm" src="https://github.com/user-attachments/assets/902af78a-14e3-49c2-bd51-c8a9950734a0">
+
+To make a Tapp Mockup, you just need to think about 3 functions you want your audience to use right from your twitter feed. ideally when your audience use those functions both of you should get some benefits. 
+
+You can Open **Tapp Product Manager** by visiting [this link](https://chatgpt.com/g/g-jnlADIWqZ-tapp-product-manager) to brainstorm your tapp idea.
   - Example: You can create a tapp that sell your NFTs/token on Twitter.
 
 ## 3. Generate the TokenScript Mockup
 - Can use [TokenScript Mockup Generator](https://tokenscriptmockupgenerator.tiiny.site/)
+
+
 
 ## 4. Test the TokenScript File in TokenScript Viewer
 - Open [TokenScript Viewer](https://viewer.tokenscript.org/).
