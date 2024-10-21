@@ -125,30 +125,6 @@ Here’s what each part of the URL represents:
 
 ---
 
-## Example Use Cases and URL Modifications:
-
-1. **Switch to Ethereum Mainnet**:
-   ```
-   https://viewer.tokenscript.org/?chain=1&contract=0xYourContractAddress&scriptId=7738_YourScriptID#
-   ```
-
-2. **Display the Transfer Action Card**:
-   ```
-   https://viewer.tokenscript.org/?chain=137&contract=0xB48f53010Acbc0E24D3D12D892E2215879e6fD13&scriptId=7738_2#card=Transfer&tokenId=9940
-   ```
-
-3. **Remove Token ID for a General Tapp View**:
-   ```
-   https://viewer.tokenscript.org/?chain=137&contract=0xB48f53010Acbc0E24D3D12D892E2215879e6fD13&scriptId=7738_2#
-   ```
-
-4. **Change the Token Contract Address and Token ID**:
-   ```
-   https://viewer.tokenscript.org/?chain=137&contract=0xYourNewContract&scriptId=7738_NewScriptID&tokenId=NewTokenID
-   ```
-
----
-
 ## Bonus (彩蛋):
 - Try sharing the URL on **Farcaster** to see additional integrations or surprises!
 
