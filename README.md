@@ -94,6 +94,8 @@ https://viewer.tokenscript.org/?chain=137&contract=0xYourContractAddress&scriptI
 - Replace the parameters based on your token/NFT.
 
 ### 8.2 **On Twitter**:
+
+Install [Tlink Extension](https://chromewebstore.google.com/detail/tlink/eblnpllcmmepkmpaalggpibindkplcjj)
 - Share the tapp on Twitter using a **Tlink** URL format:
 ```
 https://viewer.tokenscript.org/?chain=137&contract=0xYourContractAddress&scriptId=7738_YourScriptID#
