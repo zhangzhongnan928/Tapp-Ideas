@@ -1,14 +1,13 @@
-
-# Step-by-Step Guide to Build a Tapp Mockup for an Existing Token/NFT in 5 Minutes
+# Step-by-Step Guide to Build a Tapp Mockup for an Existing Token/NFT which can be demoed on Twitter
 
 ## 1. Choose an Existing Token/NFT
 - **Identify the token/NFT** you want to build a tapp for. It can be any token you own or want to interact with (e.g., an ERC-721 NFT or ERC-20 token).
 
 ## 2. Discuss Your Tapp Idea
-a NFT(like ERC721) tapp will be look like this on twitter 
+An NFT (such as ERC721) Tapp will appear on Twitter like this:
 <img width="663" alt="Screenshot 2024-10-17 at 2 52 27 pm" src="https://github.com/user-attachments/assets/0d6e427b-538d-4fc4-95c9-6952068a175d">
 
-a Fungible token(like ERC20) tapp will be look like this on twitter
+A Fungible token(such as ERC20) Tapp will appear on Twitter like this:
 <img width="837" alt="Screenshot 2024-10-17 at 2 35 08 pm" src="https://github.com/user-attachments/assets/902af78a-14e3-49c2-bd51-c8a9950734a0">
 
 To make a Tapp Mockup, you just need to think about 3 functions you want your audience to use right from your twitter feed. ideally when your audience use those functions both of you should get some benefits. 
@@ -17,9 +16,21 @@ You can Open **Tapp Product Manager** by visiting [this link](https://chatgpt.co
   - Example: You can create a tapp that sell your NFTs/token on Twitter.
 
 ## 3. Generate the TokenScript Mockup
-- Can use [TokenScript Mockup Generator](https://tokenscriptmockupgenerator.tiiny.site/)
+- Use the [TokenScript Mockup Generator](https://tokenscriptmockupgenerator.tiiny.site/)
+- Fill in the required fields:
+  - Tapp name
+  - Tapp singular name
+  - Tapp plural name
+  - Tapp description
+  - Tapp related website
+  - Tapp icon URL
+  - Contract name
+  - Chain ID and contract address (required)
+  - Function card names (required)
+- Click "Generate TokenScript Mockup"
+- Once generated, download the .tsml file using the "Download .tsml File" link
 
-
+For a detailed walkthrough of the TokenScript Mockup Generator, refer to the [user manual](https://github.com/zhangzhongnan928/TokenScript-Mockup-Generator/blob/main/README.md) in the GitHub repository.
 
 ## 4. Test the TokenScript File in TokenScript Viewer
 - Open [TokenScript Viewer](https://viewer.tokenscript.org/).
@@ -28,12 +39,29 @@ You can Open **Tapp Product Manager** by visiting [this link](https://chatgpt.co
 - Alternatively, you can test the tapp directly on Twitter via **Tlink** extension (explained later).
 
 ## 5. Host Your TokenScript on GitHub
-- Navigate to the [Tapp Ideas GitHub Repo](https://github.com/zhangzhongnan928/Tapp-Ideas/tree/main/TokenScript%20Mockup).
+- Navigate to the [Tapp Ideas GitHub Repo](https://github.com/zhangzhongnan928/
+Tapp-Ideas/tree/main/TokenScript%20Mockup).
 - Click **Add file**, then **Upload files** to upload the TokenScript file.
-  - After uploading, navigate to the file location in the **TokenScript Mockup** folder.
+  - After uploading, navigate to the file location in the **TokenScript Mockup** 
+  folder.
   - Click **Raw** to get the URL of the file.
-    - Example: `https://raw.githubusercontent.com/zhangzhongnan928/Tapp-Ideas/refs/heads/main/TokenScript%20Mockup/my-tapp.tsml`
+    - Example: `https://raw.githubusercontent.com/zhangzhongnan928/Tapp-Ideas/refs/
+    heads/main/TokenScript%20Mockup/my-tapp.tsml`
   - Copy this URL for the next step.
+
+- If you don't want to use the provided repository, you can create your own:
+  1. Go to [GitHub](https://github.com/) and sign in or create an account.
+  2. Click the "+" icon in the top right corner and select "New repository".
+  3. Name your repository, choose to make it public, and initialize it with a README.
+  4. Click "Create repository".
+  
+- To upload your TokenScript file:
+  1. In your new repository, click "Add file", then "Upload files".
+  2. Drag and drop your TokenScript file or use the file chooser.
+  3. Scroll down and click "Commit changes".
+  4. Navigate to your uploaded file and click "Raw" to get its URL.
+  5. Copy this URL for the next step.
+
 
 ## 6. Add TokenScript to ERC-7738 Registry
 - Based on the blockchain your token/NFT is on, open **TokenScript Viewer**, and follow these steps:
@@ -125,5 +153,29 @@ Here’s what each part of the URL represents:
 - Try sharing the URL on **Farcaster** to see additional integrations or surprises!
 
 ---
+Now you have the complete guide to **build, register, and share your tapp 
+mockup**. You can see it live on Twitter and in TokenScript Viewer! Enjoy the fun 
+of building your tapp and sharing it across platforms.
 
-Now you have the complete guide to **build, register, and share your tapp**. You can see it live on Twitter and in TokenScript Viewer! Enjoy the fun of building your tapp and sharing it across platforms.
+## Community Resources
+- Join the Tapp Ninjas Discord community for help, discussions, and sharing your Tapps: [Tapp Ninjas Discord](https://discord.gg/qcjpck534Y)
+- Participate in the TokenScript forum (if available)
+- Follow the official TokenScript Twitter account for updates and announcements (if available)
+
+Remember, the Tapp community is growing and evolving. Don't hesitate to reach out for support or to share your creations!
+
+---
+
+# Introduction to Tapps
+
+Tapps (Token Applications) are innovative, cross-platform mini-apps that revolutionize how users interact with their tokens and NFTs. Built on the concept of "Tokens as applications," Tapps leverage the ERC-5169/ERC-7738 standard and TokenScript technology to create portable, user-owned applications that can be accessed across various platforms and channels.
+
+Key benefits of Tapps:
+
+1. Portability: Your Tapps go wherever you go, accessible on social media, messaging apps, digital wallets, and more.
+2. Ownership: Users truly own their Tapps, just like they own their tokens.
+3. Seamless integration: Tapps can be used directly within existing platforms without the need for separate app installations.
+4. Cross-platform compatibility: Developers can create one interface that works in multiple environments.
+5. Enhanced token functionality: Users can interact with their tokens in rich, meaningful ways directly from their preferred platforms.
+
+Tapps run on platforms that have installed the TokenScript Engine, enabling a new level of interactivity and utility for blockchain-based assets. This guide will walk you through creating a Tapp mockup for your existing token or NFT, allowing you to experience the power of portable, user-centric applications.
