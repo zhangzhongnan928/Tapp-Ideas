@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ts:token xmlns:ts="http://tokenscript.org/2024/01/tokenscript"
+          xmlns:xml="http://www.w3.org/XML/1998/namespace"
+          xsi:schemaLocation="http://tokenscript.org/2024/01/tokenscript https://www.tokenscript.org/schemas/2024-01/tokenscript.xsd"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:ethereum="urn:ethereum:constantinople"
+          name="Buy me a beer">
+    <ts:label>
+        <ts:plurals xml:lang="en">
+            <ts:string quantity="one">Buy me a beer tapp NFT</ts:string>
+            <ts:string quantity="other">Buy me a beer tapp NFTs</ts:string>
+        </ts:plurals>
+    </ts:label>
+    <ts:meta>
+        <ts:description xml:lang="en">A generic token template</ts:description>
+        <ts:aboutUrl xml:lang="en">https://example.com</ts:aboutUrl>
+        <ts:iconUrl xml:lang="en">https://example.com/icon.png</ts:iconUrl>
+    </ts:meta>
+    <ts:contract interface="erc721" name="Buy me a beerContract">
+        <ts:address network="11155111">0x4e45cFDEc47924d28c41933C07f9915E86457375</ts:address>
+    </ts:contract>
+    <ts:origins>
+        <ts:ethereum contract="Buy me a beerContract"/>
+    </ts:origins>
+    <ts:cards>
+        <ts:card type="action" name="Give one Beer">
+            <ts:label>
+                <ts:string xml:lang="en">Give one Beer</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>Give one Beer</button>
+            </ts:view>
+        </ts:card>
+        <ts:card type="action" name="Give two Beer">
+            <ts:label>
+                <ts:string xml:lang="en">Give two Beer</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>Give two Beer</button>
+            </ts:view>
+        </ts:card>
+        <ts:card type="action" name="I want to receive Beer">
+            <ts:label>
+                <ts:string xml:lang="en">I want to receive Beer</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>I want to receive Beer</button>
+            </ts:view>
+        </ts:card></ts:cards>
+</ts:token>
