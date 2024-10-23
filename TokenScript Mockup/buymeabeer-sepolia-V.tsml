@@ -1,0 +1,396 @@
+<ts:token xmlns:ethereum="urn:ethereum:constantinople" xmlns:ts="http://tokenscript.org/2024/01/tokenscript" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="BuyMeABeer" xsi:schemaLocation="http://tokenscript.org/2024/01/tokenscript https://www.tokenscript.org/schemas/2024-01/tokenscript.xsd">
+	<ts:label>
+		<ts:plurals xml:lang="en">
+			<ts:string quantity="one">Buy Me A Beer</ts:string>
+		</ts:plurals>
+	</ts:label>
+	<ts:meta>
+		<ts:description xml:lang="en"> </ts:description>
+		<ts:aboutUrl xml:lang="en"> </ts:aboutUrl>
+		<ts:iconUrl xml:lang="en"> </ts:iconUrl>
+		<ts:env name="API_BASE_URL">https://store-backend-stage.smartlayer.network/buy-beer/</ts:env>
+	</ts:meta>
+	<ts:contract interface="erc721" name="BeerToken">
+		<ts:address network="11155111">0x4e45cFDEc47924d28c41933C07f9915E86457375</ts:address>
+		<ts:abi>
+			
+				[
+					{
+					  "anonymous": false,
+					  "inputs": [
+						{
+						  "indexed": false,
+						  "internalType": "uint256",
+						  "name": "inviteType",
+						  "type": "uint256"
+						},
+						{
+						  "indexed": false,
+						  "internalType": "address",
+						  "name": "to",
+						  "type": "address"
+						},
+						{
+						  "indexed": false,
+						  "internalType": "uint256",
+						  "name": "tokenId",
+						  "type": "uint256"
+						},
+						{
+						  "indexed": false,
+						  "internalType": "uint256",
+						  "name": "mintRequestId",
+						  "type": "uint256"
+						}
+					  ],
+					  "name": "Minted",
+					  "type": "event"
+					}
+				]
+			
+		</ts:abi>
+	</ts:contract>
+	<ts:contract name="Donator">
+		<ts:address network="11155111">0x2d4D0D31e24e0f4b942B06c1413AbD44043C5401</ts:address>
+		<ts:abi>
+			
+				[
+					{
+					  "inputs": [],
+					  "name": "beerPriceUsdCents",
+					  "outputs": [
+						{
+						  "internalType": "uint256",
+						  "name": "",
+						  "type": "uint256"
+						}
+					  ],
+					  "stateMutability": "view",
+					  "type": "function"
+					}
+				]
+			
+		</ts:abi>
+	</ts:contract>
+	<ts:contract name="PayToken">
+		<ts:address network="11155111">0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238</ts:address>
+		<ts:abi>
+			
+				[
+					{
+					  "inputs": [
+						{
+						  "internalType": "address",
+						  "name": "account",
+						  "type": "address"
+						}
+					  ],
+					  "name": "balanceOf",
+					  "outputs": [
+						{
+						  "internalType": "uint256",
+						  "name": "",
+						  "type": "uint256"
+						}
+					  ],
+					  "stateMutability": "view",
+					  "type": "function"
+					},
+					{
+					  "inputs": [
+						{
+						  "internalType": "address",
+						  "name": "owner",
+						  "type": "address"
+						},
+						{
+						  "internalType": "address",
+						  "name": "spender",
+						  "type": "address"
+						}
+					  ],
+					  "name": "allowance",
+					  "outputs": [
+						{
+						  "internalType": "uint256",
+						  "name": "",
+						  "type": "uint256"
+						}
+					  ],
+					  "stateMutability": "view",
+					  "type": "function"
+					},
+					{
+					  "inputs": [],
+					  "name": "decimals",
+					  "outputs": [
+						{
+						  "internalType": "uint8",
+						  "name": "",
+						  "type": "uint8"
+						}
+					  ],
+					  "stateMutability": "view",
+					  "type": "function"
+					},
+					{
+					  "inputs": [],
+					  "name": "symbol",
+					  "outputs": [
+						{
+						  "internalType": "string",
+						  "name": "",
+						  "type": "string"
+						}
+					  ],
+					  "stateMutability": "view",
+					  "type": "function"
+					}
+				]
+			
+		</ts:abi>
+	</ts:contract>
+	<ts:origins>
+		
+		<ts:ethereum contract="BeerToken"/>
+	</ts:origins>
+
+	<ts:cards>
+		<ts:viewContent xmlns="http://www.w3.org/1999/xhtml" name="common">
+			
+			
+		<style>/*&lt;![CDATA[*/ 
+.loader-container.svelte-1u0v4w2.svelte-1u0v4w2{width:100%;display:flex;justify-content:center;align-items:center}.lds-ring.svelte-1u0v4w2.svelte-1u0v4w2{display:inline-block;position:relative;width:80px;height:80px}.lds-ring.svelte-1u0v4w2 div.svelte-1u0v4w2{box-sizing:border-box;display:block;position:absolute;width:64px;height:64px;margin:8px;border:8px solid #656565;border-radius:50%;animation:svelte-1u0v4w2-lds-ring 1.2s cubic-bezier(.5,0,.5,1) infinite;border-color:#656565 transparent transparent transparent}.lds-ring.svelte-1u0v4w2 div.svelte-1u0v4w2:nth-child(1){animation-delay:-.45s}.lds-ring.svelte-1u0v4w2 div.svelte-1u0v4w2:nth-child(2){animation-delay:-.3s}.lds-ring.svelte-1u0v4w2 div.svelte-1u0v4w2:nth-child(3){animation-delay:-.15s}@keyframes svelte-1u0v4w2-lds-ring{0%{transform:rotate(0)}to{transform:rotate(360deg)}}.image-icon.svelte-1inff93.svelte-1inff93{position:relative;border-radius:8px;overflow:hidden}.image-icon.svelte-1inff93 img.svelte-1inff93{border-radius:8px;width:100%}.shimmer.svelte-1inff93.svelte-1inff93{display:inline-block;background-color:#dddbdd;width:100%;height:100%}.shimmer.svelte-1inff93.svelte-1inff93:after{position:absolute;top:0;right:0;bottom:0;left:0;transform:translate(-100%);background-image:linear-gradient(90deg,#fff0 0,#fff3 20%,#ffffff80 60%,#fff0);animation:svelte-1inff93-shimmer 2s infinite;content:""}@keyframes svelte-1inff93-shimmer{to{transform:translate(100%)}}.popover-modal.svelte-18e6o7u.svelte-18e6o7u{position:absolute;left:0;height:100%;width:100%;top:0;background-color:#0009;align-items:center;justify-content:center;display:none;overflow:hidden;z-index:100}.popover-modal.open.svelte-18e6o7u.svelte-18e6o7u{display:flex!important;animation:svelte-18e6o7u-fadeIn .25s}@keyframes svelte-18e6o7u-fadeIn{0%{opacity:0}to{opacity:1}}.popover-modal.open.svelte-18e6o7u .popover-container.svelte-18e6o7u{bottom:0!important;animation:svelte-18e6o7u-slideIn .25s}@keyframes svelte-18e6o7u-slideIn{0%{transform:translateY(500px);animation-timing-function:ease-out}to{transform:translateY(0);animation-timing-function:ease-in}}.popover-container.svelte-18e6o7u.svelte-18e6o7u{box-sizing:border-box;position:absolute;height:fit-content;max-height:100%;width:100%;background:#fff;border-radius:8px;bottom:-100%;animation:svelte-18e6o7u-slideIn .5s reverse;display:flex;flex-direction:column}.title-bar.svelte-18e6o7u.svelte-18e6o7u{display:flex;align-items:center;justify-content:center;color:#000;margin:30px 0 0;padding-bottom:20px}.title.svelte-18e6o7u.svelte-18e6o7u{font-size:18px;margin:0 20px}.close-btn.svelte-18e6o7u.svelte-18e6o7u{position:absolute;z-index:100;left:15px;cursor:pointer}.popover-inner.svelte-18e6o7u.svelte-18e6o7u{position:relative;overflow:auto;display:flex;flex-direction:column;flex-grow:1;overflow-x:hidden;padding:0 15px 15px}@media (max-width: 500px){.popover-modal.svelte-18e6o7u.svelte-18e6o7u{align-items:end}.popover-container.svelte-18e6o7u.svelte-18e6o7u{border-radius:8px 8px 0 0!important}}
+
+ /*//]]&gt;*/</style>
+<script type="module" crossorigin="">//&lt;![CDATA[
+var He=Object.defineProperty;var Ze=(t,e,n)=&gt;e in t?He(t,e,{enumerable:!0,configurable:!0,writable:!0,value:n}):t[e]=n;var ue=(t,e,n)=&gt;Ze(t,typeof e!="symbol"?e+"":e,n);(function(){const e=document.createElement("link").relList;if(e&amp;&amp;e.supports&amp;&amp;e.supports("modulepreload"))return;for(const l of document.querySelectorAll('link[rel="modulepreload"]'))i(l);new MutationObserver(l=&gt;{for(const o of l)if(o.type==="childList")for(const a of o.addedNodes)a.tagName==="LINK"&amp;&amp;a.rel==="modulepreload"&amp;&amp;i(a)}).observe(document,{childList:!0,subtree:!0});function n(l){const o={};return l.integrity&amp;&amp;(o.integrity=l.integrity),l.referrerPolicy&amp;&amp;(o.referrerPolicy=l.referrerPolicy),l.crossOrigin==="use-credentials"?o.credentials="include":l.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function i(l){if(l.ep)return;l.ep=!0;const o=n(l);fetch(l.href,o)}})();function U(){}function We(t,e){for(const n in e)t[n]=e[n];return t}function Fe(t){return t()}function ke(){return Object.create(null)}function Q(t){t.forEach(Fe)}function Se(t){return typeof t=="function"}function J(t,e){return t!=t?e==e:t!==e||t&amp;&amp;typeof t=="object"||typeof t=="function"}let oe;function we(t,e){return t===e?!0:(oe||(oe=document.createElement("a")),oe.href=e,t===oe.href)}function ze(t){return Object.keys(t).length===0}function Je(t,e,n,i){if(t){const l=Ue(t,e,n,i);return t[0](l)}}function Ue(t,e,n,i){return t[1]&amp;&amp;i?We(n.ctx.slice(),t[1](i(e))):n.ctx}function Ve(t,e,n,i){if(t[2]&amp;&amp;i){const l=t[2](i(n));if(e.dirty===void 0)return l;if(typeof l=="object"){const o=[],a=Math.max(e.dirty.length,l.length);for(let r=0;r&lt;a;r+=1)o[r]=e.dirty[r]|l[r];return o}return e.dirty|l}return e.dirty}function Ke(t,e,n,i,l,o){if(l){const a=Ue(e,n,i,o);t.p(a,l)}}function Ge(t){if(t.ctx.length&gt;32){const e=[],n=t.ctx.length/32;for(let i=0;i&lt;n;i++)e[i]=-1;return e}return-1}function Qe(t){return t??""}function u(t,e){t.appendChild(e)}function y(t,e,n){t.insertBefore(e,n||null)}function g(t){t.parentNode&amp;&amp;t.parentNode.removeChild(t)}function d(t){return document.createElement(t)}function F(t){return document.createTextNode(t)}function $(){return F(" ")}function he(){return F("")}function D(t,e,n,i){return t.addEventListener(e,n,i),()=&gt;t.removeEventListener(e,n,i)}function _(t,e,n){n==null?t.removeAttribute(e):t.getAttribute(e)!==n&amp;&amp;t.setAttribute(e,n)}function Xe(t){return Array.from(t.childNodes)}function Z(t,e){e=""+e,t.data!==e&amp;&amp;(t.data=e)}function ve(t,e){t.value=e??""}function O(t,e,n,i){n==null?t.style.removeProperty(e):t.style.setProperty(e,n,"")}function ye(t,e){return new t(e)}let le;function ie(t){le=t}function Ye(){if(!le)throw new Error("Function called outside component initialization");return le}function xe(t){Ye().$$.on_mount.push(t)}const ee=[],Ie=[];let te=[];const $e=[],et=Promise.resolve();let me=!1;function tt(){me||(me=!0,et.then(Me))}function pe(t){te.push(t)}const de=new Set;let Y=0;function Me(){if(Y!==0)return;const t=le;do{try{for(;Y&lt;ee.length;){const e=ee[Y];Y++,ie(e),nt(e.$$)}}catch(e){throw ee.length=0,Y=0,e}for(ie(null),ee.length=0,Y=0;Ie.length;)Ie.pop()();for(let e=0;e&lt;te.length;e+=1){const n=te[e];de.has(n)||(de.add(n),n())}te.length=0}while(ee.length);for(;$e.length;)$e.pop()();me=!1,de.clear(),ie(t)}function nt(t){if(t.fragment!==null){t.update(),Q(t.before_update);const e=t.dirty;t.dirty=[-1],t.fragment&amp;&amp;t.fragment.p(t.ctx,e),t.after_update.forEach(pe)}}function it(t){const e=[],n=[];te.forEach(i=&gt;t.indexOf(i)===-1?e.push(i):n.push(i)),n.forEach(i=&gt;i()),te=e}const re=new Set;let X;function se(){X={r:0,c:[],p:X}}function ae(){X.r||Q(X.c),X=X.p}function S(t,e){t&amp;&amp;t.i&amp;&amp;(re.delete(t),t.i(e))}function M(t,e,n,i){if(t&amp;&amp;t.o){if(re.has(t))return;re.add(t),X.c.push(()=&gt;{re.delete(t),i&amp;&amp;(n&amp;&amp;t.d(1),i())}),t.o(e)}else i&amp;&amp;i()}function V(t){t&amp;&amp;t.c()}function W(t,e,n){const{fragment:i,after_update:l}=t.$$;i&amp;&amp;i.m(e,n),pe(()=&gt;{const o=t.$$.on_mount.map(Fe).filter(Se);t.$$.on_destroy?t.$$.on_destroy.push(...o):Q(o),t.$$.on_mount=[]}),l.forEach(pe)}function z(t,e){const n=t.$$;n.fragment!==null&amp;&amp;(it(n.after_update),Q(n.on_destroy),n.fragment&amp;&amp;n.fragment.d(e),n.on_destroy=n.fragment=null,n.ctx=[])}function lt(t,e){t.$$.dirty[0]===-1&amp;&amp;(ee.push(t),tt(),t.$$.dirty.fill(0)),t.$$.dirty[e/31|0]|=1&lt;&lt;e%31}function K(t,e,n,i,l,o,a=null,r=[-1]){const c=le;ie(t);const s=t.$$={fragment:null,ctx:[],props:o,update:U,not_equal:l,bound:ke(),on_mount:[],on_destroy:[],on_disconnect:[],before_update:[],after_update:[],context:new Map(e.context||(c?c.$$.context:[])),callbacks:ke(),dirty:r,skip_bound:!1,root:e.target||c.$$.root};a&amp;&amp;a(s.root);let f=!1;if(s.ctx=n?n(t,e.props||{},(m,p,...C)=&gt;{const b=C.length?C[0]:p;return s.ctx&amp;&amp;l(s.ctx[m],s.ctx[m]=b)&amp;&amp;(!s.skip_bound&amp;&amp;s.bound[m]&amp;&amp;s.bound[m](b),f&amp;&amp;lt(t,m)),p}):[],s.update(),f=!0,Q(s.before_update),s.fragment=i?i(s.ctx):!1,e.target){if(e.hydrate){const m=Xe(e.target);s.fragment&amp;&amp;s.fragment.l(m),m.forEach(g)}else s.fragment&amp;&amp;s.fragment.c();e.intro&amp;&amp;S(t.$$.fragment),W(t,e.target,e.anchor),Me()}ie(c)}class G{constructor(){ue(this,"$$");ue(this,"$$set")}$destroy(){z(this,1),this.$destroy=U}$on(e,n){if(!Se(n))return U;const i=this.$$.callbacks[e]||(this.$$.callbacks[e]=[]);return i.push(n),()=&gt;{const l=i.indexOf(n);l!==-1&amp;&amp;i.splice(l,1)}}$set(e){this.$$set&amp;&amp;!ze(e)&amp;&amp;(this.$$.skip_bound=!0,this.$$set(e),this.$$.skip_bound=!1)}}const ot="4";typeof window&lt;"u"&amp;&amp;(window.__svelte||(window.__svelte={v:new Set})).v.add(ot);const x=[];function rt(t,e=U){let n;const i=new Set;function l(r){if(J(t,r)&amp;&amp;(t=r,n)){const c=!x.length;for(const s of i)s[1](),x.push(s,t);if(c){for(let s=0;s&lt;x.length;s+=2)x[s][0](x[s+1]);x.length=0}}}function o(r){l(r(t))}function a(r,c=U){const s=[r,c];return i.add(s),i.size===1&amp;&amp;(n=e(l,o)||U),r(t),()=&gt;{i.delete(s),i.size===0&amp;&amp;n&amp;&amp;(n(),n=null)}}return{set:l,update:o,subscribe:a}}const _e=rt({token:null});function st(t){_e.set({..._e,token:t})}const ce={data:_e,setToken:st};function Ce(t){let e;return{c(){e=d("div"),e.innerHTML='&lt;div class="lds-ring svelte-1u0v4w2"&gt;&lt;div class="svelte-1u0v4w2"&gt;&lt;/div&gt; &lt;div class="svelte-1u0v4w2"&gt;&lt;/div&gt; &lt;div class="svelte-1u0v4w2"&gt;&lt;/div&gt; &lt;div class="svelte-1u0v4w2"&gt;&lt;/div&gt;&lt;/div&gt;',_(e,"class","loader-container svelte-1u0v4w2")},m(n,i){y(n,e,i)},d(n){n&amp;&amp;g(e)}}}function at(t){let e,n=t[0]&amp;&amp;Ce();return{c(){n&amp;&amp;n.c(),e=he()},m(i,l){n&amp;&amp;n.m(i,l),y(i,e,l)},p(i,[l]){i[0]?n||(n=Ce(),n.c(),n.m(e.parentNode,e)):n&amp;&amp;(n.d(1),n=null)},i:U,o:U,d(i){i&amp;&amp;g(e),n&amp;&amp;n.d(i)}}}function ct(t,e,n){let{show:i}=e;return t.$$set=l=&gt;{"show"in l&amp;&amp;n(0,i=l.show)},[i]}class ge extends G{constructor(e){super(),K(this,e,ct,at,J,{show:0})}}async function De(t,e){const n=await tokenscript.personal.sign({data:JSON.stringify(e)});tokenscript.action.showLoader(),await qe(`${t}/profile`,"POST",{profile:e,signature:n}),tokenscript.action.hideLoader()}async function qe(t,e,n){const i={"Content-type":n?"application/json":"text/plain",Accept:"application/json"},l=await fetch(tokenscript.env.API_BASE_URL+t,{method:e,headers:i,cache:"no-store",body:n?JSON.stringify(n):void 0});let o;try{o=await l.json()}catch{}if(l.status&gt;299||l.status&lt;200)throw new ft("HTTP Request failed:"+((o==null?void 0:o.message)??l.statusText),l.status);return o}class ft extends Error{constructor(e,n){super(e),this.statusCode=n}}const ne={};async function ut(t){if(ne[t])return ne[t];try{const n=await(await fetch(`https://api.token-discovery.tokenscript.org/ens/reverse?address=${t}`)).json();ne[t]=(n==null?void 0:n.ensName)??null}catch{ne[t]=null}return ne[t]}function dt(t){let e,n,i,l=(t[1]?`${t[1]} (${t[0]})`:t[0])+"",o;return{c(){e=d("small"),n=F("Owner: "),i=d("span"),o=F(l),_(e,"class","eth-address"),_(e,"title",t[0])},m(a,r){y(a,e,r),u(e,n),u(e,i),u(i,o)},p(a,[r]){r&amp;3&amp;&amp;l!==(l=(a[1]?`${a[1]} (${a[0]})`:a[0])+"")&amp;&amp;Z(o,l),r&amp;1&amp;&amp;_(e,"title",a[0])},i:U,o:U,d(a){a&amp;&amp;g(e)}}}function mt(t,e,n){let{address:i}=e,l;return xe(async()=&gt;{const o=await ut(i);o&amp;&amp;n(1,l=o)}),t.$$set=o=&gt;{"address"in o&amp;&amp;n(0,i=o.address)},[i,l]}class pt extends G{constructor(e){super(),K(this,e,mt,dt,J,{address:0})}}function Ee(t){let e,n,i,l;return{c(){e=d("img"),_(e,"alt","image"),we(e.src,n=t[0])||_(e,"src",n),_(e,"class","svelte-1inff93")},m(o,a){y(o,e,a),i||(l=D(e,"load",t[5]),i=!0)},p(o,a){a&amp;1&amp;&amp;!we(e.src,n=o[0])&amp;&amp;_(e,"src",n)},d(o){o&amp;&amp;g(e),i=!1,l()}}}function _t(t){let e,n,i,l,o=t[0]&amp;&amp;Ee(t);return{c(){e=d("div"),n=d("div"),i=$(),o&amp;&amp;o.c(),_(n,"class","shimmer svelte-1inff93"),O(n,"display",t[4]?"none":"block"),_(e,"class","image-icon svelte-1inff93"),O(e,"width",t[2]),O(e,"height",t[2]),O(e,"max-width",t[3]),O(e,"margin","0 auto"),_(e,"title",l=t[1]??"")},m(a,r){y(a,e,r),u(e,n),u(e,i),o&amp;&amp;o.m(e,null)},p(a,[r]){r&amp;16&amp;&amp;O(n,"display",a[4]?"none":"block"),a[0]?o?o.p(a,r):(o=Ee(a),o.c(),o.m(e,null)):o&amp;&amp;(o.d(1),o=null),r&amp;4&amp;&amp;O(e,"width",a[2]),r&amp;4&amp;&amp;O(e,"height",a[2]),r&amp;8&amp;&amp;O(e,"max-width",a[3]),r&amp;2&amp;&amp;l!==(l=a[1]??"")&amp;&amp;_(e,"title",l)},i:U,o:U,d(a){a&amp;&amp;g(e),o&amp;&amp;o.d()}}}function ht(t,e,n){let{src:i}=e,{title:l}=e,{width:o="40px"}=e,{maxWidth:a="none"}=e,r=!1;const c=()=&gt;n(4,r=!0);return t.$$set=s=&gt;{"src"in s&amp;&amp;n(0,i=s.src),"title"in s&amp;&amp;n(1,l=s.title),"width"in s&amp;&amp;n(2,o=s.width),"maxWidth"in s&amp;&amp;n(3,a=s.maxWidth)},[i,l,o,a,r,c]}class je extends G{constructor(e){super(),K(this,e,ht,_t,J,{src:0,title:1,width:2,maxWidth:3})}}function Be(t){let e,n,i,l,o,a,r;return{c(){e=d("div"),n=d("h2"),i=F(t[0]),l=$(),o=d("button"),o.innerHTML="&lt;span&gt;&amp;lt;&lt;/span&gt;",_(n,"class","title svelte-18e6o7u"),_(o,"class","close-btn btn btn-secondary svelte-18e6o7u"),_(e,"class","title-bar svelte-18e6o7u")},m(c,s){y(c,e,s),u(e,n),u(n,i),u(e,l),u(e,o),a||(r=D(o,"click",t[7]),a=!0)},p(c,s){s&amp;1&amp;&amp;Z(i,c[0])},d(c){c&amp;&amp;g(e),a=!1,r()}}}function gt(t){let e,n,i,l,o,a,r,c=!t[1]&amp;&amp;Be(t);const s=t[6].default,f=Je(s,t,t[5],null);return{c(){e=d("div"),n=d("div"),c&amp;&amp;c.c(),i=$(),l=d("div"),f&amp;&amp;f.c(),_(l,"class","popover-inner svelte-18e6o7u"),_(n,"class","popover-container svelte-18e6o7u"),_(e,"class",Qe("popover-modal "+t[2]+(open?" open":""))+" svelte-18e6o7u")},m(m,p){y(m,e,p),u(e,n),c&amp;&amp;c.m(n,null),u(n,i),u(n,l),f&amp;&amp;f.m(l,null),o=!0,a||(r=D(e,"click",t[8]),a=!0)},p(m,[p]){m[1]?c&amp;&amp;(c.d(1),c=null):c?c.p(m,p):(c=Be(m),c.c(),c.m(n,i)),f&amp;&amp;f.p&amp;&amp;(!o||p&amp;32)&amp;&amp;Ke(f,s,m,m[5],o?Ve(s,m[5],p,null):Ge(m[5]),null)},i(m){o||(S(f,m),o=!0)},o(m){M(f,m),o=!1},d(m){m&amp;&amp;g(e),c&amp;&amp;c.d(),f&amp;&amp;f.d(m),a=!1,r()}}}function bt(t,e,n){let{$$slots:i={},$$scope:l}=e,{dismissCallback:o=null}=e,{title:a=null}=e,{hideTitleBar:r=!1}=e;const c=Date.now();function s(){o&amp;&amp;(o(),n(4,o=null))}const f=()=&gt;s(),m=p=&gt;{p.target.classList.contains(c)&amp;&amp;s()};return t.$$set=p=&gt;{"dismissCallback"in p&amp;&amp;n(4,o=p.dismissCallback),"title"in p&amp;&amp;n(0,a=p.title),"hideTitleBar"in p&amp;&amp;n(1,r=p.hideTitleBar),"$$scope"in p&amp;&amp;n(5,l=p.$$scope)},[a,r,c,s,o,l,i,f,m]}class kt extends G{constructor(e){super(),K(this,e,bt,gt,J,{dismissCallback:4,title:0,hideTitleBar:1})}}function Ne(t){let e,n,i,l=t[0].tokenInfo.name+"",o,a,r,c,s,f,m,p=t[0].donations+"",C,b,h,N,k,A=walletAddress.toLowerCase()===t[0].ownerAddress.toLowerCase(),P;c=new je({props:{alt:t[0].tokenInfo.name,src:t[0].tokenInfo.image,width:"100%"}}),h=new pt({props:{address:t[0].ownerAddress}});let w=A&amp;&amp;Ae(t);return{c(){e=d("div"),n=d("div"),i=d("h1"),o=F(l),a=$(),r=d("div"),V(c.$$.fragment),s=$(),f=d("h3"),m=F("Beers donated: "),C=F(p),b=$(),V(h.$$.fragment),N=$(),k=d("div"),w&amp;&amp;w.c(),O(n,"text-align","center"),O(r,"text-align","center"),O(e,"flex-grow","1"),O(k,"padding","20px 0")},m(I,T){y(I,e,T),u(e,n),u(n,i),u(i,o),u(e,a),u(e,r),W(c,r,null),u(r,s),u(r,f),u(f,m),u(f,C),u(r,b),W(h,r,null),y(I,N,T),y(I,k,T),w&amp;&amp;w.m(k,null),P=!0},p(I,T){(!P||T&amp;1)&amp;&amp;l!==(l=I[0].tokenInfo.name+"")&amp;&amp;Z(o,l);const v={};T&amp;1&amp;&amp;(v.alt=I[0].tokenInfo.name),T&amp;1&amp;&amp;(v.src=I[0].tokenInfo.image),c.$set(v),(!P||T&amp;1)&amp;&amp;p!==(p=I[0].donations+"")&amp;&amp;Z(C,p);const E={};T&amp;1&amp;&amp;(E.address=I[0].ownerAddress),h.$set(E),T&amp;1&amp;&amp;(A=walletAddress.toLowerCase()===I[0].ownerAddress.toLowerCase()),A?w?w.p(I,T):(w=Ae(I),w.c(),w.m(k,null)):w&amp;&amp;(w.d(1),w=null)},i(I){P||(S(c.$$.fragment,I),S(h.$$.fragment,I),P=!0)},o(I){M(c.$$.fragment,I),M(h.$$.fragment,I),P=!1},d(I){I&amp;&amp;(g(e),g(N),g(k)),z(c),z(h),w&amp;&amp;w.d()}}}function Ae(t){let e,n,i;return{c(){e=d("button"),e.textContent="Update Profile",_(e,"class","btn primary-btn"),O(e,"width","100%")},m(l,o){y(l,e,o),n||(i=D(e,"click",t[4]),n=!0)},p:U,d(l){l&amp;&amp;g(e),n=!1,i()}}}function Te(t){let e,n;return e=new kt({props:{title:"Edit Profile",dismissCallback:t[8],$$slots:{default:[wt]},$$scope:{ctx:t}}}),{c(){V(e.$$.fragment)},m(i,l){W(e,i,l),n=!0},p(i,l){const o={};l&amp;4&amp;&amp;(o.dismissCallback=i[8]),l&amp;513&amp;&amp;(o.$$scope={dirty:l,ctx:i}),e.$set(o)},i(i){n||(S(e.$$.fragment,i),n=!0)},o(i){M(e.$$.fragment,i),n=!1},d(i){z(e,i)}}}function wt(t){let e,n,i,l,o,a,r,c,s,f,m,p,C,b,h,N;return{c(){e=d("div"),n=d("div"),i=d("input"),o=$(),a=d("label"),a.textContent="Name",r=$(),c=d("div"),s=d("input"),m=$(),p=d("label"),p.textContent="Image URL",C=$(),b=d("button"),b.textContent="Update",_(i,"id","name"),_(i,"type","text"),i.value=l=t[0].tokenInfo.name,i.required=!0,_(n,"class","form-field full-width"),_(s,"id","image"),_(s,"type","text"),s.value=f=t[0].tokenInfo.image,s.required=!0,_(c,"class","form-field full-width"),_(b,"class","btn primary-btn"),O(b,"width","100%")},m(k,A){y(k,e,A),u(e,n),u(n,i),u(n,o),u(n,a),u(e,r),u(e,c),u(c,s),u(c,m),u(c,p),u(e,C),u(e,b),h||(N=[D(a,"click",t[5]),D(p,"click",t[6]),D(b,"click",t[7])],h=!0)},p(k,A){A&amp;1&amp;&amp;l!==(l=k[0].tokenInfo.name)&amp;&amp;i.value!==l&amp;&amp;(i.value=l),A&amp;1&amp;&amp;f!==(f=k[0].tokenInfo.image)&amp;&amp;s.value!==f&amp;&amp;(s.value=f)},d(k){k&amp;&amp;g(e),h=!1,Q(N)}}}function vt(t){var c;let e,n,i,l,o,a=((c=t[0])==null?void 0:c.tokenInfo)&amp;&amp;Ne(t);n=new ge({props:{show:t[1]}});let r=t[2]&amp;&amp;Te(t);return{c(){a&amp;&amp;a.c(),e=$(),V(n.$$.fragment),i=$(),r&amp;&amp;r.c(),l=he()},m(s,f){a&amp;&amp;a.m(s,f),y(s,e,f),W(n,s,f),y(s,i,f),r&amp;&amp;r.m(s,f),y(s,l,f),o=!0},p(s,[f]){var p;(p=s[0])!=null&amp;&amp;p.tokenInfo?a?(a.p(s,f),f&amp;1&amp;&amp;S(a,1)):(a=Ne(s),a.c(),S(a,1),a.m(e.parentNode,e)):a&amp;&amp;(se(),M(a,1,1,()=&gt;{a=null}),ae());const m={};f&amp;2&amp;&amp;(m.show=s[1]),n.$set(m),s[2]?r?(r.p(s,f),f&amp;4&amp;&amp;S(r,1)):(r=Te(s),r.c(),S(r,1),r.m(l.parentNode,l)):r&amp;&amp;(se(),M(r,1,1,()=&gt;{r=null}),ae())},i(s){o||(S(a),S(n.$$.fragment,s),S(r),o=!0)},o(s){M(a),M(n.$$.fragment,s),M(r),o=!1},d(s){s&amp;&amp;(g(e),g(i),g(l)),a&amp;&amp;a.d(s),z(n,s),r&amp;&amp;r.d(s)}}}function yt(t,e,n){let i,l=!0,o=!1;ce.data.subscribe(async p=&gt;{p.token&amp;&amp;(n(0,i=p.token),n(1,l=!1))});async function a(){const p={name:document.getElementById("name").value,image:document.getElementById("image").value};try{await De(i.tokenId,p),n(2,o=!1)}catch(C){tokenscript.action.hideLoader(),tokenscript.action.showMessageToast("error","Could not update profile",C.message)}}return[i,l,o,a,()=&gt;n(2,o=!0),()=&gt;document.getElementById("name").focus(),()=&gt;document.getElementById("image").focus(),()=&gt;a(),()=&gt;n(2,o=!1)]}class It extends G{constructor(e){super(),K(this,e,yt,vt,J,{})}}function $t(t){let e;return{c(){e=d("h1"),e.textContent="404"},m(n,i){y(n,e,i)},p:U,i:U,o:U,d(n){n&amp;&amp;g(e)}}}class Ct extends G{constructor(e){super(),K(this,e,null,$t,J,{})}}function Pe(t){let e,n,i,l,o,a,r,c,s,f,m,p,C,b,h,N,k,A,P,w,I,T;return{c(){e=d("div"),n=d("h3"),n.textContent="Mint a donation token",i=$(),l=d("div"),o=d("input"),a=$(),r=d("label"),r.textContent="Invite Code",c=$(),s=d("div"),f=d("input"),m=$(),p=d("label"),p.textContent="Name",C=$(),b=d("div"),h=d("input"),N=$(),k=d("label"),k.textContent="Image URL",A=$(),P=d("div"),w=d("button"),w.textContent="Mint",_(o,"id","invite"),_(o,"type","text"),o.required=!0,_(l,"class","form-field full-width"),_(f,"id","name"),_(f,"type","text"),f.required=!0,_(s,"class","form-field full-width"),_(h,"id","image"),_(h,"type","text"),h.required=!0,_(b,"class","form-field full-width"),O(e,"flex-grow","1"),_(w,"class","btn primary-btn"),O(w,"width","100%"),O(P,"padding","20px 0")},m(v,E){y(v,e,E),u(e,n),u(e,i),u(e,l),u(l,o),u(l,a),u(l,r),u(e,c),u(e,s),u(s,f),u(s,m),u(s,p),u(e,C),u(e,b),u(b,h),u(b,N),u(b,k),y(v,A,E),y(v,P,E),u(P,w),I||(T=[D(r,"click",t[3]),D(p,"click",t[4]),D(k,"click",t[5]),D(w,"click",t[6])],I=!0)},p:U,d(v){v&amp;&amp;(g(e),g(A),g(P)),I=!1,Q(T)}}}function Et(t){let e,n,i,l=t[0]&amp;&amp;Pe(t);return n=new ge({props:{show:t[1]}}),{c(){l&amp;&amp;l.c(),e=$(),V(n.$$.fragment)},m(o,a){l&amp;&amp;l.m(o,a),y(o,e,a),W(n,o,a),i=!0},p(o,[a]){o[0]?l?l.p(o,a):(l=Pe(o),l.c(),l.m(e.parentNode,e)):l&amp;&amp;(l.d(1),l=null);const r={};a&amp;2&amp;&amp;(r.show=o[1]),n.$set(r)},i(o){i||(S(n.$$.fragment,o),i=!0)},o(o){M(n.$$.fragment,o),i=!1},d(o){o&amp;&amp;g(e),l&amp;&amp;l.d(o),z(n,o)}}}function Bt(t,e,n){let i,l=!0;ce.data.subscribe(async f=&gt;{f.token&amp;&amp;(n(0,i=f.token),n(1,l=!1))});async function o(){var w,I,T;const f=document.getElementById("invite").value,m={name:document.getElementById("name").value,image:document.getElementById("image").value},p=new ethers.AbiCoder,[C,b,h]=await p.decode(["uint","uint","bytes"],f);tokenscript.action.setProps({inviteId:C,expiry:b,signature:h});const N=await tokenscript.action.executeTransaction({txName:"mint",triggers:[]});if(!N)return;tokenscript.action.showLoader();const k=await tokenscript.eth.getRpcProvider(Number(chainID)).getTransactionReceipt(N.txNumber),P=(T=(I=(((w=k==null?void 0:k.logs)==null?void 0:w.map(v=&gt;tokenscript.eth.getContractInstance("BeerToken").interface.parseLog(v)))??[]).find(v=&gt;v&amp;&amp;v.name==="Minted"))==null?void 0:I.args)==null?void 0:T[2];console.log("Minted token ID: ",P),await De(P.toString(),m),await tokenscript.action.refreshTokens(),tokenscript.action.openCard("Info","BeerToken",P.toString())}return[i,l,o,()=&gt;document.getElementById("invite").focus(),()=&gt;document.getElementById("name").focus(),()=&gt;document.getElementById("image").focus(),()=&gt;o()]}class Nt extends G{constructor(e){super(),K(this,e,Bt,Et,J,{})}}function Le(t){let e,n,i,l=t[0].tokenInfo.name+"",o,a,r,c,s,f,m,p,C,b,h,N,k,A,P,w,I,T,v,E,B,R;r=new je({props:{alt:t[0].tokenInfo.name,src:t[0].tokenInfo.image,width:"200px"}}),w=new ge({props:{show:t[1]}});let q=t[10]&amp;&amp;Oe(t),j=t[10]&amp;&amp;Re(t);return{c(){e=d("div"),n=d("h3"),i=F("Donate a beer to "),o=F(l),a=$(),V(r.$$.fragment),c=$(),s=d("div"),f=d("input"),m=$(),p=d("label"),p.textContent="Beers",C=$(),b=d("div"),h=d("select"),N=d("option"),k=F("Ethereum"),A=d("option"),A.textContent="USDC",P=$(),V(w.$$.fragment),I=$(),q&amp;&amp;q.c(),T=$(),v=d("div"),j&amp;&amp;j.c(),O(n,"text-align","center"),_(f,"id","amount"),_(f,"type","number"),_(f,"step","1"),_(f,"min","1"),_(f,"placeholder","Number Of Beers"),_(f,"data-ts-prop","false"),f.value=t[6],_(s,"class","form-field full-width"),N.__value=ethers.ZeroAddress,ve(N,N.__value),A.__value="0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",ve(A,A.__value),_(h,"id","currency"),_(b,"class","form-field full-width"),O(e,"flex-grow","1"),O(v,"padding","20px 0")},m(L,H){y(L,e,H),u(e,n),u(n,i),u(n,o),u(e,a),W(r,e,null),u(e,c),u(e,s),u(s,f),u(s,m),u(s,p),u(e,C),u(e,b),u(b,h),u(h,N),u(N,k),u(h,A),u(e,P),W(w,e,null),u(e,I),q&amp;&amp;q.m(e,null),y(L,T,H),y(L,v,H),j&amp;&amp;j.m(v,null),E=!0,B||(R=[D(f,"change",t[14]),D(p,"click",t[15]),D(h,"change",t[16])],B=!0)},p(L,H){(!E||H&amp;1)&amp;&amp;l!==(l=L[0].tokenInfo.name+"")&amp;&amp;Z(o,l);const fe={};H&amp;1&amp;&amp;(fe.alt=L[0].tokenInfo.name),H&amp;1&amp;&amp;(fe.src=L[0].tokenInfo.image),r.$set(fe),(!E||H&amp;64&amp;&amp;f.value!==L[6])&amp;&amp;(f.value=L[6]);const be={};H&amp;2&amp;&amp;(be.show=L[1]),w.$set(be),L[10]?q?q.p(L,H):(q=Oe(L),q.c(),q.m(e,null)):q&amp;&amp;(q.d(1),q=null),L[10]?j?j.p(L,H):(j=Re(L),j.c(),j.m(v,null)):j&amp;&amp;(j.d(1),j=null)},i(L){E||(S(r.$$.fragment,L),S(w.$$.fragment,L),E=!0)},o(L){M(r.$$.fragment,L),M(w.$$.fragment,L),E=!1},d(L){L&amp;&amp;(g(e),g(T),g(v)),z(r),z(w),q&amp;&amp;q.d(),j&amp;&amp;j.d(),B=!1,Q(R)}}}function Oe(t){let e,n,i=parseFloat(Number(ethers.formatUnits(t[3],t[4])).toFixed(6))+"",l,o,a,r,c,s,f=parseFloat(Number(ethers.formatUnits(BigInt(t[10].data.exchangeRate),t[4])).toFixed(6))+"",m,p,C,b,h,N,k,A,P=parseFloat(Number(ethers.formatUnits(t[9],t[4])).toFixed(6))+"",w,I,T,v,E;return{c(){e=d("span"),n=F("Balance: "),l=F(i),o=d("br"),a=d("br"),r=$(),c=d("span"),s=F("Rate: 1 USD = "),m=F(f),p=$(),C=F(t[5]),b=d("br"),h=d("br"),N=$(),k=d("span"),A=F("Donating: "),w=F(P),I=$(),T=F(t[5]),v=d("br"),E=d("br")},m(B,R){y(B,e,R),u(e,n),u(e,l),y(B,o,R),y(B,a,R),y(B,r,R),y(B,c,R),u(c,s),u(c,m),u(c,p),u(c,C),y(B,b,R),y(B,h,R),y(B,N,R),y(B,k,R),u(k,A),u(k,w),u(k,I),u(k,T),y(B,v,R),y(B,E,R)},p(B,R){R&amp;24&amp;&amp;i!==(i=parseFloat(Number(ethers.formatUnits(B[3],B[4])).toFixed(6))+"")&amp;&amp;Z(l,i),R&amp;1040&amp;&amp;f!==(f=parseFloat(Number(ethers.formatUnits(BigInt(B[10].data.exchangeRate),B[4])).toFixed(6))+"")&amp;&amp;Z(m,f),R&amp;32&amp;&amp;Z(C,B[5]),R&amp;528&amp;&amp;P!==(P=parseFloat(Number(ethers.formatUnits(B[9],B[4])).toFixed(6))+"")&amp;&amp;Z(w,P),R&amp;32&amp;&amp;Z(T,B[5])},d(B){B&amp;&amp;(g(e),g(o),g(a),g(r),g(c),g(b),g(h),g(N),g(k),g(v),g(E))}}}function Re(t){let e,n=t[3]&lt;t[9]?"Insufficient balance":"Donate",i,l,o,a;return{c(){e=d("button"),i=F(n),_(e,"class","btn primary-btn"),O(e,"width","100%"),e.disabled=l=!t[10]||t[3]&lt;t[9]},m(r,c){y(r,e,c),u(e,i),o||(a=D(e,"click",t[17]),o=!0)},p(r,c){c&amp;520&amp;&amp;n!==(n=r[3]&lt;r[9]?"Insufficient balance":"Donate")&amp;&amp;Z(i,n),c&amp;1544&amp;&amp;l!==(l=!r[10]||r[3]&lt;r[9])&amp;&amp;(e.disabled=l)},d(r){r&amp;&amp;g(e),o=!1,a()}}}function At(t){let e,n,i=t[0]&amp;&amp;Le(t);return{c(){i&amp;&amp;i.c(),e=he()},m(l,o){i&amp;&amp;i.m(l,o),y(l,e,o),n=!0},p(l,[o]){l[0]?i?(i.p(l,o),o&amp;1&amp;&amp;S(i,1)):(i=Le(l),i.c(),S(i,1),i.m(e.parentNode,e)):i&amp;&amp;(se(),M(i,1,1,()=&gt;{i=null}),ae())},i(l){n||(S(i),n=!0)},o(l){M(i),n=!1},d(l){l&amp;&amp;g(e),i&amp;&amp;i.d(l)}}}function Tt(t,e,n){let i,l=!0;const o=tokenscript.eth.getContractInstance("Donator"),a=tokenscript.eth.getRpcProvider(Number(chainID));let r=ethers.ZeroAddress,c=0n,s=18n,f="ETH",m=1n,p=0n,C=0n,b=0n,h;ce.data.subscribe(async v=&gt;{if(v.token){n(0,i=v.token);try{n(7,p=await o.beerPriceUsdCents()),await N(),await k()}catch(E){console.error(E)}n(1,l=!1)}});async function N(){if(r===ethers.ZeroAddress)n(3,c=await a.getBalance(walletAddress)),n(4,s=18n),n(5,f="ETH");else{const v=new ethers.Contract(r,tokenscript.eth.getContractInfo("PayToken").abi,a),E=await Promise.all([v.balanceOf(walletAddress),v.decimals(),v.symbol()]);n(3,c=E[0]),n(4,s=E[1]),n(5,f=E[2])}}async function k(){n(10,h=await qe(`${i.tokenId}/buy-beer-signature`,"POST",{tokenChainId:Number(chainID),tokenAddress:r})),n(8,C=m*p),n(9,b=C*BigInt(h.data.exchangeRate)/100n)}async function A(){if(h){if(r!==ethers.ZeroAddress){const E=await new ethers.Contract(r,tokenscript.eth.getContractInfo("PayToken").abi,a).allowance(walletAddress,o.target);if(b&gt;E&amp;&amp;(tokenscript.action.setProps({approveAmt:b}),!await tokenscript.action.executeTransaction("approvePayment")))return}tokenscript.action.setProps({amount:m,beerNftOwner:i.ownerAddress,proofExpireTime:h.data.proofExpireTime,tokenAddress:h.data.tokenAddress,exchangeRate:h.data.exchangeRate,signature:h.signature,ethValue:r===ethers.ZeroAddress?b:"0"}),await tokenscript.action.executeTransaction("donate")}}return[i,l,r,c,s,f,m,p,C,b,h,N,k,A,async v=&gt;{h&amp;&amp;(n(6,m=BigInt(v.target.value)),n(8,C=m*p),n(9,b=C*BigInt(h.data.exchangeRate)/100n))},()=&gt;document.getElementById("amount").focus(),async v=&gt;{var E;tokenscript.action.showLoader(),n(2,r=(E=v.target)==null?void 0:E.value);try{n(10,h=null),await N(),await k()}catch(B){console.error(B)}tokenscript.action.hideLoader()},()=&gt;A()]}class Pt extends G{constructor(e){super(),K(this,e,Tt,At,J,{})}}function Lt(t){let e,n,i,l,o,a;var r=t[0];function c(s,f){return{}}return r&amp;&amp;(i=ye(r,c())),{c(){e=d("div"),n=d("div"),i&amp;&amp;V(i.$$.fragment),_(n,"id","token-container")},m(s,f){y(s,e,f),u(e,n),i&amp;&amp;W(i,n,null),l=!0,o||(a=D(window,"hashchange",t[1]),o=!0)},p(s,[f]){if(f&amp;1&amp;&amp;r!==(r=s[0])){if(i){se();const m=i;M(m.$$.fragment,1,0,()=&gt;{z(m,1)}),ae()}r?(i=ye(r,c()),V(i.$$.fragment),S(i.$$.fragment,1),W(i,n,null)):i=null}},i(s){l||(i&amp;&amp;S(i.$$.fragment,s),l=!0)},o(s){i&amp;&amp;M(i.$$.fragment,s),l=!1},d(s){s&amp;&amp;g(e),i&amp;&amp;z(i),o=!1,a()}}}function Ot(t,e,n){const i={"#info":It,"#mint":Nt,"#donate":Pt};let l;function o(){n(0,l=i[document.location.hash]||Ct)}return tokenscript.tokens.dataChanged=async(a,r,c)=&gt;{ce.setToken(r.currentInstance),r.currentInstance,o()},[l,o]}class Rt extends G{constructor(e){super(),K(this,e,Ot,Lt,J,{})}}new Rt({target:document.body});
+
+//]]&gt;</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+
+<style>
+					/* <![CDATA[ */
+					
+* {
+	font-family: "Rubik", sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background-color: #fff;
+	color: #0B0B0B;
+	/*background-image: url('https://img.freepik.com/premium-vector/two-mugs-beer-with-words-beer-them_730620-846553.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;*/
+}
+
+h1 {
+	font-size: 22px;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+h5 {
+	font-size: 16px;
+	margin-bottom: 12px;
+}
+
+p.light {
+	color: #545454;
+}
+
+.loader-modal {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#token-container {
+	padding: 0 20px;
+	width: 100vw;
+	height: 100vh;
+	max-width: 600px;
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+.btn {
+	height: 40px;
+	padding: 0 16px;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.primary-btn {
+	color: #fff;
+	background: linear-gradient(235deg, #001AFF 37.73%, #4F95FF 118.69%);
+
+}
+.primary-btn:hover {
+	background: linear-gradient(214.82deg, #001AFF -21.14%, #4F95FF 89.22%);
+}
+
+.primary-btn:disabled {
+	background: linear-gradient(235deg, rgba(0, 26, 255, 0.5) 37.73%, rgba(79, 149, 255, 0.5) 118.69%) !important;
+	cursor: not-allowed;
+}
+
+.secondary-btn {
+	background: #fff;
+	border: 2px solid #011aff;
+	color: #011aff;
+}
+
+.secondary-btn:hover {
+	border-color: #0f28ff;
+	color: #0f28ff;
+}
+
+.form-field {
+	position: relative;
+	margin: 25px auto;
+	height: 50px;
+	width: 100%;
+	max-width: 300px;
+}
+
+.form-field.full-width {
+	max-width: unset !important;
+}
+
+.form-field label {
+	position: absolute;
+	left: 12px;
+	top: 12px;
+	transition: all 0.3s ease;
+	font-size: 16px;
+	color: #969696;
+	background: #fff;
+	padding: 2px 4px;
+}
+
+.form-field input, .form-field select {
+	background-color: transparent;
+	padding: 16px 12px;
+	border: 1px solid #969696;
+	border-radius: 4px;
+	width: 100%;
+}
+
+.form-field input:focus + label, .form-field select, input:not(:placeholder-shown) ~ label {
+	top: -8px;
+	font-size: 12px;
+	color: #011aff;
+}
+
+.form-field input:focus {
+	outline: 0;
+	border-color: #011aff !important;
+}
+
+input:focus:invalid {
+	border-color: red !important;
+}
+
+input:focus:invalid + label {
+	color: red !important;
+}
+
+					/* ]]> */
+				</style></ts:viewContent>
+
+
+		<ts:card name="Donate" type="action">
+			<ts:label>
+				<ts:string xml:lang="en">Buy a Beer 🍺</ts:string>
+			</ts:label>
+			<ts:view xmlns="http://www.w3.org/1999/xhtml" uiButton="false" urlFragment="donate" xml:lang="en">
+				<ts:viewContent name="common"/>
+			</ts:view>
+		</ts:card>
+
+				<ts:card name="Donate2" type="action">
+			<ts:label>
+				<ts:string xml:lang="en">Buy Two 🍻</ts:string>
+			</ts:label>
+			<ts:view xmlns="http://www.w3.org/1999/xhtml" uiButton="false" urlFragment="donate" xml:lang="en">
+				<ts:viewContent name="common"/>
+			</ts:view>
+		</ts:card>
+
+		<ts:card name="Mint" type="action">
+			<ts:label>
+				<ts:string xml:lang="en">Make Your Own Beer Tapp</ts:string>
+			</ts:label>
+			<ts:view xmlns="http://www.w3.org/1999/xhtml" uiButton="false" urlFragment="mint" xml:lang="en">
+				<ts:viewContent name="common"/>
+			</ts:view>
+		</ts:card>
+
+	</ts:cards>
+
+	<ts:attribute name="donations">
+		<ts:label>
+			<ts:string xml:lang="en"># Beers Donated</ts:string>
+		</ts:label>
+		<ts:origins>
+			<ethereum:call as="uint" contract="Donator" function="donations">
+				<ts:data>
+					<ts:address ref="ownerAddress"/>
+				</ts:data>
+			</ethereum:call>
+		</ts:origins>
+	</ts:attribute>
+
+	<ts:transaction name="mint">
+		<ethereum:transaction contract="BeerToken" function="mint">
+			<ts:data>
+				<ts:uint256 local-ref="inviteId"/>
+				<ts:uint256 local-ref="expiry"/>
+				<ts:bytes local-ref="signature"/>
+			</ts:data>
+		</ethereum:transaction>
+	</ts:transaction>
+
+	<ts:transaction name="approvePayment">
+		<ethereum:transaction as="uint" contract="PayToken" function="approve">
+			<ts:data>
+				<ts:address ref="contractAddress_Donator"/>
+				<ts:uint256 local-ref="approveAmt"/>
+			</ts:data>
+			
+		</ethereum:transaction>
+	</ts:transaction>
+
+	<ts:transaction name="donate">
+		<ethereum:transaction contract="Donator" function="buyABeer">
+			<ts:data>
+				<ts:uint256 ref="tokenId"/>
+				<ts:uint256 local-ref="amount"/>
+				<ts:address local-ref="beerNftOwner"/>
+				<ts:uint256 local-ref="proofExpireTime"/>
+				<ts:address local-ref="tokenAddress"/>
+				<ts:uint256 local-ref="exchangeRate"/>
+				<ts:bytes local-ref="signature"/>
+			</ts:data>
+			<ethereum:value local-ref="ethValue"/>
+		</ethereum:transaction>
+	</ts:transaction>
+
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><ds:SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#ecdsa-sha256"/><ds:Reference><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><ds:DigestValue>aStF+soVgkAejrB/lXxKzAw8y/bWwSkRi/rmzvEdWoI=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>wayaBfwkcIBU6XcjrvhFba4np1R1CV4XV2+tSnq9c9llMxvDsQnCVWqRrSETZKIkK+bU9G+gtiiGbdkckmH6kw==</ds:SignatureValue><ds:KeyInfo><ds:KeyValue><ecdsa:ECDSAKeyValue xmlns:ecdsa="http://www.w3.org/2001/04/xmldsig-more#"><ecdsa:DomainParameters><ecdsa:NamedCurve URI="urn:oid:1.3.132.0.10"/></ecdsa:DomainParameters><ecdsa:PublicKey><ecdsa:X>UMNWsZUAplUWJBnWg1OpxD5n9sR9IWCqScnMbd/RvF4=</ecdsa:X><ecdsa:Y>oxxcHRchQi5tsQ2rTgnfCnp2w2TaeSzGnu+DZAo/9/E=</ecdsa:Y></ecdsa:PublicKey></ecdsa:ECDSAKeyValue></ds:KeyValue></ds:KeyInfo></ds:Signature></ts:token>
