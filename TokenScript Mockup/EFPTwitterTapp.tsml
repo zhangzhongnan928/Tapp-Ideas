@@ -125,7 +125,7 @@
                             alert("Error: User address not found");
                             return;
                         }
-                        var tlink = baseUrl + "?url=" + tappUrl + "&address=" + userAddress;
+                        var tlink = baseUrl + "?url=" + tappUrl + "&amp;address=" + userAddress;
                         document.getElementById('tlinkResult').innerText = tlink;
                     }
                 </script>
