@@ -1,62 +1,23 @@
 # 100   Tapp Ideas for Existing Tokens/NFTs
 
-1. BAYC (Ethereum) - Exclusive Yacht Party Inviter: BAYC holders create TLinks for followers to get on a virtual yacht party waitlist.
+1. BAYC (Ethereum) - show off your Ape; Like, Share your Ape, Leaderboard.
 
-2. Uniswap (Ethereum) - Liquidity Provider Referral: UNI holders generate TLinks for others to join liquidity pools with boosted rewards.
-
-3. Aave (Ethereum) - Interest Rate Booster: AAVE token holders create TLinks for others to get temporary interest rate boosts on deposits.
-
-4. Decentraland LAND (Ethereum) - Virtual Land Tour Guide: LAND owners create TLinks for others to take guided tours of their virtual properties.
-
-5. Axie Infinity (Ronin) - Axie Lending Platform: Axie owners create TLinks for scholars to borrow Axies with custom profit-sharing terms.
-
-6. Polygon MATIC (Polygon) - Gas Fee Sponsorship: MATIC holders create TLinks for others to get a set number of gas-free transactions.
-
-7. Optimism (OP) - Transaction Fee Rebate: OP token holders generate TLinks for others to claim partial transaction fee rebates.
+2. Meme Coins - Liquidity Provider Referral: Add liquidity, leaderboard, Share to earn.
 
 8. Arbitrum (ARB) - Governance Voting Power Boost: ARB holders create TLinks for others to temporarily boost their voting power in governance.
 
-9. Base Coin (Base) - Onboarding Reward Multiplier: Base Coin holders create TLinks for new users to get multiplied onboarding rewards.
-
 10. Lens Protocol (Polygon) - Follower Boost Campaign: Lens Profile owners create TLinks for others to get temporary follower count boosts.
 
-11. ENS Domains (Ethereum) - Subdomain Giveaway: ENS domain owners create TLinks for others to claim free subdomains for a limited time.
+11. ENS Domains (Ethereum) - Subdomain sales: ENS domain owners create TLinks for others to buy subdomains.
 
-12. Chainlink (Ethereum) - Data Feed Access Pass: LINK token holders create TLinks for others to access premium data feeds temporarily.
-
-13. Rocket Pool (Ethereum) - Staking Reward Booster: RPL token holders create TLinks for others to get boosted ETH staking rewards.
-
-14. The Sandbox LAND (Ethereum) - Virtual Event Ticket: LAND owners create TLinks for others to attend exclusive virtual events on their land.
-
-15. Lido (Ethereum) - Liquid Staking Bonus: LDO token holders create TLinks for others to receive bonus stETH when staking ETH.
-
-16. Maker (Ethereum) - Vault Collateral Booster: MKR holders create TLinks for others to temporarily increase their vault's collateral ratio.
-
-17. Compound (Ethereum) - Borrow Interest Discount: COMP token holders create TLinks for others to get temporary borrow interest rate discounts.
-
-18. Curve (Ethereum) - Trading Fee Discount: CRV token holders create TLinks for others to get temporary trading fee discounts on Curve.
-
-19. SushiSwap (Ethereum) - Yield Farming Multiplier: SUSHI holders create TLinks for others to get temporary yield farming reward multipliers.
-
-20. Yearn Finance (Ethereum) - Vault Performance Fee Waiver: YFI token holders create TLinks for others to get temporary vault performance fee waivers.
-
-21. Opensea Shares (Ethereum) - NFT Listing Booster: OSEA token holders create TLinks for others to get temporary priority listing placement.
-
-22. Rarible (Ethereum) - NFT Minting Fee Waiver: RARI token holders create TLinks for others to mint NFTs with waived fees for a limited time.
-
-23. SuperRare (Ethereum) - Artist Spotlight Pass: RARE token holders create TLinks for others to access exclusive artist spotlight events.
-
-24. Foundation (Ethereum) - Bid Matching: Foundation NFT owners create TLinks for others to get partial bid matching on their artworks.
-
-25. Art Blocks (Ethereum) - Early Mint Access: Art Blocks NFT owners create TLinks for others to get early access to upcoming project mints.
-
-26. Bored Ape Kennel Club (Ethereum) - Virtual Dog Park Access: BAKC owners create TLinks for others to visit an exclusive virtual dog park.
+NFT minting
 
 27. CryptoPunks (Ethereum) - Punk Trait Simulator: CryptoPunk owners create TLinks for others to temporarily try on their Punk's traits.
 
-28. Meebits (Ethereum) - 3D Avatar Customizer: Meebits owners create TLinks for others to customize and use their Meebit as a 3D avatar.
+NFT Brandextender - NFT holder make a tlink for others to dress up his NFT, sale direvitivise 
 
-29. World of Women (Ethereum) - Empowerment Workshop Access: WoW NFT holders create TLinks for others to join exclusive empowerment workshops.
+
+
 
 30. Doodles (Ethereum) - Doodle Customization Tool: Doodles owners create TLinks for others to customize and share Doodle-inspired artwork.
 
