@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ts:token xmlns:ts="http://tokenscript.org/2024/01/tokenscript"
+          xmlns:xml="http://www.w3.org/XML/1998/namespace"
+          xsi:schemaLocation="http://tokenscript.org/2024/01/tokenscript https://www.tokenscript.org/schemas/2024-01/tokenscript.xsd"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:ethereum="urn:ethereum:constantinople"
+          name="GenericToken">
+    <ts:label>
+        <ts:plurals xml:lang="en">
+            <ts:string quantity="one">Generic Token</ts:string>
+            <ts:string quantity="other">Generic Tokens</ts:string>
+        </ts:plurals>
+    </ts:label>
+    <ts:meta>
+        <ts:description xml:lang="en">A generic token template</ts:description>
+        <ts:aboutUrl xml:lang="en">https://example.com</ts:aboutUrl>
+        <ts:iconUrl xml:lang="en">https://example.com/icon.png</ts:iconUrl>
+    </ts:meta>
+    <ts:contract interface="erc721" name="GenericTokenContract">
+        <ts:address network="8453">0xCe33eCe38e57EAb54FA51f24BB081Eff595c35c5</ts:address>
+    </ts:contract>
+    <ts:origins>
+        <ts:ethereum contract="GenericTokenContract"/>
+    </ts:origins>
+    <ts:cards>
+        <ts:card type="action" name="领取">
+            <ts:label>
+                <ts:string xml:lang="en">领取</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>领取</button>
+            </ts:view>
+        </ts:card>
+        <ts:card type="action" name="Share to Earn">
+            <ts:label>
+                <ts:string xml:lang="en">Share to Earn</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>Share to Earn</button>
+            </ts:view>
+        </ts:card></ts:cards>
+</ts:token>
