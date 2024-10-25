@@ -14,152 +14,163 @@ NFT minting
 
 27. CryptoPunks (Ethereum) - Punk Trait Simulator: CryptoPunk owners create TLinks for others to temporarily try on their Punk's traits.
 
-NFT Brandextender - NFT holder make a tlink for others to dress up his NFT, sale direvitivise 
+NFT Brandextender.io - NFT holder make a tlink for others to dress up his NFT, sale direvitivise 
 
 
 
 
-30. Doodles (Ethereum) - Doodle Customization Tool: Doodles owners create TLinks for others to customize and share Doodle-inspired artwork.
+30. Doodles (Ethereum) - Doodle Customization Tool: Doodles owners create TLinks for others to customize and buy Doodle-inspired artwork AI based .
 
-31. Cool Cats (Ethereum) - Cat Breeding Simulator: Cool Cats owners create TLinks for others to simulate breeding with their Cool Cat.
 
-32. VeeFriends (Ethereum) - Mentorship Session Lottery: VeeFriends holders create TLinks for others to enter exclusive mentorship session lotteries.
 
-33. Pudgy Penguins (Ethereum) - Igloo Building Contest: Pudgy Penguin owners create TLinks for others to join igloo building contests.
+31. Cool Cats (Ethereum) - Cat Breeding Simulator: Cool Cats owners create TLinks for others to simulate breeding with their Cool Cat. sell AI generate direvitivise
 
-34. Azuki (Ethereum) - Virtual Skate Park Access: Azuki holders create TLinks for others to access an exclusive virtual skate park.
 
-35. CloneX (Ethereum) - Avatar Wardrobe Sharing: CloneX owners create TLinks for others to try on their CloneX's wardrobe items.
 
-36. Moonbirds (Ethereum) - Nest Building Workshop: Moonbirds holders create TLinks for others to join nest building workshops.
 
-37. Goblintown (Ethereum) - Goblin Language Translator: Goblintown NFT owners create TLinks for others to translate text into "Goblin speak".
 
-38. Otherside (Ethereum) - Land Exploration Pass: Otherside land owners create TLinks for others to explore their virtual land plots.
+33. Pudgy Penguins (Ethereum) - sell AI generate direvitivise
 
-39. Cryptoadz (Ethereum) - Toad Racing Tournament: Cryptoadz owners create TLinks for others to enter their toads in virtual racing tournaments.
+34. 
 
-40. Nouns (Ethereum) - Noun Trait Mixer: Nouns owners create TLinks for others to mix and match Noun traits to create unique designs.
+35. Azuki (Ethereum) - sell AI generate direvitivise art, fight or anything
 
-41. XCOPY (Ethereum) - Glitch Art Generator: XCOPY NFT owners create TLinks for others to generate glitch art inspired by their pieces.
 
-42. Fidenza (Ethereum) - Generative Art Workshop: Fidenza owners create TLinks for others to join generative art creation workshops.
 
-43. CryptoKitties (Ethereum) - Virtual Cat Show: CryptoKitties owners create TLinks for others to enter their kitties in virtual cat shows.
+37. Moonbirds (Ethereum) - Nest Building Workshop: Moonbirds holders create TLinks for others to join nest building workshops.
 
-44. Gods Unchained (Immutable X) - Card Deck Tester: Gods Unchained players create TLinks for others to test their custom card decks.
 
-45. Sorare (Ethereum) - Fantasy Team Booster: Sorare card owners create TLinks for others to temporarily boost their fantasy football teams.
 
-46. Axie Infinity (Ronin) - Battle Simulator: Axie owners create TLinks for others to simulate battles with their Axies.
+38. Goblintown (Ethereum) - Goblin Language Translator: Goblintown NFT owners create TLinks for others to translate text into "Goblin speak".AI based
 
-47. Decentraland Wearables (Ethereum) - Virtual Fashion Show: Wearable owners create TLinks for others to participate in virtual fashion shows.
 
-48. The Sandbox Assets (Ethereum) - Game Asset Tester: SAND asset creators create TLinks for others to test their game assets.
 
-49. Aavegotchi (Polygon) - Gotchi Lending Program: Aavegotchi owners create TLinks for others to borrow their Gotchis for gaming.
+-------------------
 
-50. My Neighbor Alice (Ethereum) - Virtual Farm Visitor Pass: ALICE land owners create TLinks for others to visit and interact with their virtual farms.
 
-51. Illuvium (Ethereum) - Creature Battler Demo: ILV token holders create TLinks for others to demo creature battles with high-level Illuvials.
+40. Cryptoadz (Ethereum) - Toad Racing Tournament: Cryptoadz owners create TLinks for others to enter their toads in virtual racing tournaments.
 
-52. Star Atlas (Solana) - Spaceship Test Flight: ATLAS token holders create TLinks for others to test-fly premium spaceships.
+41. Nouns (Ethereum) - Noun Trait Mixer: Nouns owners create TLinks for others to mix and match Noun traits to create unique designs.
 
-53. Enjin (Ethereum) - Cross-Game Item Tester: ENJ token holders create TLinks for others to test cross-game compatible items.
+42. XCOPY (Ethereum) - Glitch Art Generator: XCOPY NFT owners create TLinks for others to generate glitch art inspired by their pieces.
 
-54. Gala Games (Ethereum) - Multi-Game Pass: GALA token holders create TLinks for others to access multiple Gala games for a limited time.
+43. Fidenza (Ethereum) - Generative Art Workshop: Fidenza owners create TLinks for others to join generative art creation workshops.
 
-55. Alien Worlds (WAX) - Planet Exploration Pass: Alien Worlds land owners create TLinks for others to explore their planets.
+44. CryptoKitties (Ethereum) - Virtual Cat Show: CryptoKitties owners create TLinks for others to enter their kitties in virtual cat shows.
 
-56. Splinterlands (Hive) - Card Deck Strategy Analyzer: Splinterlands players create TLinks for others to get AI-powered deck strategy analysis.
+45. Gods Unchained (Immutable X) - Card Deck Tester: Gods Unchained players create TLinks for others to test their custom card decks.
 
-57. Axie Infinity Shards (Ronin) - Scholarship Program Matcher: AXS holders create TLinks for potential scholars to match with top-performing managers.
+46. Sorare (Ethereum) - Fantasy Team Booster: Sorare card owners create TLinks for others to temporarily boost their fantasy football teams.
 
-58. Smooth Love Potion (Ronin) - SLP Earning Booster: SLP holders create TLinks for others to get temporary SLP earning rate boosts.
+47. Axie Infinity (Ronin) - Battle Simulator: Axie owners create TLinks for others to simulate battles with their Axies.
 
-59. Ronin (RON) - Transaction Fee Waiver: RON holders create TLinks for others to get a set number of fee-free transactions on Ronin.
+48. Decentraland Wearables (Ethereum) - Virtual Fashion Show: Wearable owners create TLinks for others to participate in virtual fashion shows.
 
-60. Yield Guild Games (Ethereum) - Guild Tryout Pass: YGG holders create TLinks for others to participate in exclusive guild tryout events.
+49. The Sandbox Assets (Ethereum) - Game Asset Tester: SAND asset creators create TLinks for others to test their game assets.
 
-61. Merit Circle (Ethereum) - Scholarship Interview Fast-Track: MC token holders create TLinks for scholars to fast-track scholarship interviews.
+50. Aavegotchi (Polygon) - Gotchi Lending Program: Aavegotchi owners create TLinks for others to borrow their Gotchis for gaming.
 
-62. Decentral Games (Polygon) - VIP Casino Pass: DG token holders create TLinks for others to access VIP areas in virtual casinos.
+51. My Neighbor Alice (Ethereum) - Virtual Farm Visitor Pass: ALICE land owners create TLinks for others to visit and interact with their virtual farms.
 
-63. Treasure (Arbitrum) - Rare Item Showcase: MAGIC token holders create TLinks for others to showcase their rarest Treasure items.
+52. Illuvium (Ethereum) - Creature Battler Demo: ILV token holders create TLinks for others to demo creature battles with high-level Illuvials.
 
-64. Crypto Raiders (Polygon) - Raid Party Finder: Crypto Raiders NFT owners create TLinks for others to join high-level raid parties.
+53. Star Atlas (Solana) - Spaceship Test Flight: ATLAS token holders create TLinks for others to test-fly premium spaceships.
 
-65. Ember Sword (Immutable X) - Land Development Simulator: EMBER token holders create TLinks for others to simulate land development strategies.
+54. Enjin (Ethereum) - Cross-Game Item Tester: ENJ token holders create TLinks for others to test cross-game compatible items.
 
-66. Guild of Guardians (Immutable X) - Guardian Team Optimizer: GOG token holders create TLinks for others to optimize their Guardian teams.
+55. Gala Games (Ethereum) - Multi-Game Pass: GALA token holders create TLinks for others to access multiple Gala games for a limited time.
 
-67. Thetan Arena (BNB Chain) - Hero Trial Pass: THG token holders create TLinks for others to trial premium heroes in battles.
+56. Alien Worlds (WAX) - Planet Exploration Pass: Alien Worlds land owners create TLinks for others to explore their planets.
 
-68. DeFi Kingdoms (Harmony) - Hero Rental Program: JEWEL token holders create TLinks for others to rent high-level heroes for quests.
+57. Splinterlands (Hive) - Card Deck Strategy Analyzer: Splinterlands players create TLinks for others to get AI-powered deck strategy analysis.
 
-69. Pegaxy (Polygon) - Virtual Horse Racing Event: PGX token holders create TLinks for others to participate in exclusive racing events.
+58. Axie Infinity Shards (Ronin) - Scholarship Program Matcher: AXS holders create TLinks for potential scholars to match with top-performing managers.
 
-70. Farmers World (WAX) - Crop Yield Booster: FWW token holders create TLinks for others to temporarily boost their crop yields.
+59. Smooth Love Potion (Ronin) - SLP Earning Booster: SLP holders create TLinks for others to get temporary SLP earning rate boosts.
 
-71. Mines of Dalarnia (BNB Chain) - Rare Mineral Detector: DAR token holders create TLinks for others to use rare mineral detectors in mines.
+60. Ronin (RON) - Transaction Fee Waiver: RON holders create TLinks for others to get a set number of fee-free transactions on Ronin.
 
-72. Mobox (BNB Chain) - MoMo Power-Up Station: MBOX token holders create TLinks for others to temporarily power up their MoMos.
+61. Yield Guild Games (Ethereum) - Guild Tryout Pass: YGG holders create TLinks for others to participate in exclusive guild tryout events.
 
-73. Blocktopia (Polygon) - Virtual Real Estate Tour: BLOK token holders create TLinks for others to tour premium virtual real estate.
+62. Merit Circle (Ethereum) - Scholarship Interview Fast-Track: MC token holders create TLinks for scholars to fast-track scholarship interviews.
 
-74. Vulcan Forged (Polygon) - Land Staking Booster: PYR token holders create TLinks for others to get temporary land staking reward boosts.
+63. Decentral Games (Polygon) - VIP Casino Pass: DG token holders create TLinks for others to access VIP areas in virtual casinos.
 
-75. Sipher (Ethereum) - Neko Battle Royale: SIPHER token holders create TLinks for others to join exclusive Neko battle royale events.
+64. Treasure (Arbitrum) - Rare Item Showcase: MAGIC token holders create TLinks for others to showcase their rarest Treasure items.
 
-76. Genopets (Solana) - Gene Boost Activator: GENE token holders create TLinks for others to activate temporary gene boosts for their Genopets.
+65. Crypto Raiders (Polygon) - Raid Party Finder: Crypto Raiders NFT owners create TLinks for others to join high-level raid parties.
 
-77. Aurory (Solana) - Nefty Showcase: AURY token holders create TLinks for others to showcase their rarest Nefties in a virtual gallery.
+66. Ember Sword (Immutable X) - Land Development Simulator: EMBER token holders create TLinks for others to simulate land development strategies.
 
-78. Crabada (Avalanche) - Crab Breeding Accelerator: TUS token holders create TLinks for others to speed up their crab breeding process.
+67. Guild of Guardians (Immutable X) - Guardian Team Optimizer: GOG token holders create TLinks for others to optimize their Guardian teams.
 
-79. Sunflower Land (Polygon) - Crop Growth Accelerator: SFL token holders create TLinks for others to temporarily speed up crop growth times.
+68. Thetan Arena (BNB Chain) - Hero Trial Pass: THG token holders create TLinks for others to trial premium heroes in battles.
 
-80. Stepn (Solana) - Energy Boost Activator: GMT token holders create TLinks for others to activate temporary energy boosts for their sneakers.
+69. DeFi Kingdoms (Harmony) - Hero Rental Program: JEWEL token holders create TLinks for others to rent high-level heroes for quests.
 
-81. Illuvium Zero (Ethereum) - Land Development Boost: ILV token holders create TLinks for others to get temporary land development speed boosts.
+70. Pegaxy (Polygon) - Virtual Horse Racing Event: PGX token holders create TLinks for others to participate in exclusive racing events.
 
-82. Big Time (Ethereum) - Time Machine Upgrade: Big Time NFT owners create TLinks for others to temporarily upgrade their time machines.
+71. Farmers World (WAX) - Crop Yield Booster: FWW token holders create TLinks for others to temporarily boost their crop yields.
 
-83. Treeverse (Ethereum) - Founder's Plot Visitor Pass: Founder's Plot owners create TLinks for others to visit and explore their exclusive plots.
+72. Mines of Dalarnia (BNB Chain) - Rare Mineral Detector: DAR token holders create TLinks for others to use rare mineral detectors in mines.
 
-84. Nifty Island (Ethereum) - Island Customization Tool: Nifty Island NFT owners create TLinks for others to use premium island customization tools.
+73. Mobox (BNB Chain) - MoMo Power-Up Station: MBOX token holders create TLinks for others to temporarily power up their MoMos.
 
-85. Crypto Unicorns (Polygon) - Rainbow Rush Event Pass: RBW token holders create TLinks for others to participate in exclusive Rainbow Rush events.
+74. Blocktopia (Polygon) - Virtual Real Estate Tour: BLOK token holders create TLinks for others to tour premium virtual real estate.
 
-86. Cometh (Polygon) - Spaceship Upgrade Simulator: MUST token holders create TLinks for others to simulate premium spaceship upgrades.
+75. Vulcan Forged (Polygon) - Land Staking Booster: PYR token holders create TLinks for others to get temporary land staking reward boosts.
 
-87. League of Kingdoms (Ethereum) - Kingdom Defense Booster: LOKA token holders create TLinks for others to temporarily boost their kingdom's defenses.
+76. Sipher (Ethereum) - Neko Battle Royale: SIPHER token holders create TLinks for others to join exclusive Neko battle royale events.
 
-88. Influence (Ethereum) - Space Station Builder: SWAY token holders create TLinks for others to use premium space station building tools.
+77. Genopets (Solana) - Gene Boost Activator: GENE token holders create TLinks for others to activate temporary gene boosts for their Genopets.
 
-89. Ethermon (Ethereum) - Mon Fusion Simulator: EMON token holders create TLinks for others to simulate fusions with rare Mons.
+78. Aurory (Solana) - Nefty Showcase: AURY token holders create TLinks for others to showcase their rarest Nefties in a virtual gallery.
 
-90. Revv Racing (Polygon) - Pro Racing Tips: REVV token holders create TLinks for others to access pro racing tips and strategies.
+79. Crabada (Avalanche) - Crab Breeding Accelerator: TUS token holders create TLinks for others to speed up their crab breeding process.
 
-91. The Sandbox Game Maker (Ethereum) - Premium Asset Library: SAND token holders create TLinks for others to access a premium Game Maker asset library.
+80. Sunflower Land (Polygon) - Crop Growth Accelerator: SFL token holders create TLinks for others to temporarily speed up crop growth times.
 
-92. Decentraland Names (Ethereum) - Custom Emote Creator: DCL Name owners create TLinks for others to create and use custom emotes in Decentraland.
+81. Stepn (Solana) - Energy Boost Activator: GMT token holders create TLinks for others to activate temporary energy boosts for their sneakers.
 
-93. Somnium Space (Ethereum) - VR Experience Enhancer: CUBE token holders create TLinks for others to enhance their VR experience with premium features.
+82. Illuvium Zero (Ethereum) - Land Development Boost: ILV token holders create TLinks for others to get temporary land development speed boosts.
 
-94. Cryptovoxels (Ethereum) - Parcel Development Consultant: Cryptovoxels parcel owners create TLinks for others to get AI-powered parcel development advice.
+83. Big Time (Ethereum) - Time Machine Upgrade: Big Time NFT owners create TLinks for others to temporarily upgrade their time machines.
 
-95. NFT Worlds (Ethereum) - World Generation Booster: WRLD token holders create TLinks for others to access premium world generation features.
+84. Treeverse (Ethereum) - Founder's Plot Visitor Pass: Founder's Plot owners create TLinks for others to visit and explore their exclusive plots.
 
-96. Wilder World (Ethereum) - Dimension Hopping Pass: WILD token holders create TLinks for others to access exclusive dimensional travel experiences.
+85. Nifty Island (Ethereum) - Island Customization Tool: Nifty Island NFT owners create TLinks for others to use premium island customization tools.
 
-97. Matrix World (Ethereum) - AI Architecture Assistant: MATa token holders create TLinks for others to use AI-powered architecture design tools.
+86. Crypto Unicorns (Polygon) - Rainbow Rush Event Pass: RBW token holders create TLinks for others to participate in exclusive Rainbow Rush events.
 
-98. Netvrk (Ethereum) - Virtual Reality Masterclass: NTVRK token holders create TLinks for others to attend VR development masterclasses.
+87. Cometh (Polygon) - Spaceship Upgrade Simulator: MUST token holders create TLinks for others to simulate premium spaceship upgrades.
 
-99. Dvision Network (Ethereum) - Metaverse Event Organizer: DVI token holders create TLinks for others to use premium metaverse event organizing tools.
+88. League of Kingdoms (Ethereum) - Kingdom Defense Booster: LOKA token holders create TLinks for others to temporarily boost their kingdom's defenses.
 
-100. Metahero (BNB Chain) - 3D Avatar Creator: HERO token holders create TLinks for others to create high-fidelity 3D avatars using scanning technology.
+89. Influence (Ethereum) - Space Station Builder: SWAY token holders create TLinks for others to use premium space station building tools.
+
+90. Ethermon (Ethereum) - Mon Fusion Simulator: EMON token holders create TLinks for others to simulate fusions with rare Mons.
+
+91. Revv Racing (Polygon) - Pro Racing Tips: REVV token holders create TLinks for others to access pro racing tips and strategies.
+
+92. The Sandbox Game Maker (Ethereum) - Premium Asset Library: SAND token holders create TLinks for others to access a premium Game Maker asset library.
+
+93. Decentraland Names (Ethereum) - Custom Emote Creator: DCL Name owners create TLinks for others to create and use custom emotes in Decentraland.
+
+94. Somnium Space (Ethereum) - VR Experience Enhancer: CUBE token holders create TLinks for others to enhance their VR experience with premium features.
+
+95. Cryptovoxels (Ethereum) - Parcel Development Consultant: Cryptovoxels parcel owners create TLinks for others to get AI-powered parcel development advice.
+
+96. NFT Worlds (Ethereum) - World Generation Booster: WRLD token holders create TLinks for others to access premium world generation features.
+
+97. Wilder World (Ethereum) - Dimension Hopping Pass: WILD token holders create TLinks for others to access exclusive dimensional travel experiences.
+
+98. Matrix World (Ethereum) - AI Architecture Assistant: MATa token holders create TLinks for others to use AI-powered architecture design tools.
+
+99. Netvrk (Ethereum) - Virtual Reality Masterclass: NTVRK token holders create TLinks for others to attend VR development masterclasses.
+
+100. Dvision Network (Ethereum) - Metaverse Event Organizer: DVI token holders create TLinks for others to use premium metaverse event organizing tools.
+
+101. Metahero (BNB Chain) - 3D Avatar Creator: HERO token holders create TLinks for others to create high-fidelity 3D avatars using scanning technology.
 
 # 100 Tapp Ideas for Fungible Tokens
 
