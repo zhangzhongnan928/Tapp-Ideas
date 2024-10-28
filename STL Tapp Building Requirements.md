@@ -58,11 +58,11 @@ Maximum of 3 pages per feature:
 - Ready for production use quickly
 
 ## Notes
-### 1. NFT can be used as account, that means any application can have NFTs, just use it as account, admin account, user account.
-### 2. One Token/NFT can have unlimited script, example: selling NFT, same NFT each different listing price can be seprate script.
-### 3. One script can be added to different Token/NFTs, example: love the Token/NFT, voting recorded in database
-### 4. One script can use mutiple Token/NFTs, example: mix your NFT with mine, click mix choose one of your NFT, get a new one which combine mine and yours.
-### 5. Tapp doesn't have to be stand along, it can has a landing page like Buy me a beer to work together with tapp.
+#### 1. NFT can be used as account, that means any application can have NFTs, just use it as account, admin account, user account.
+#### 2. One Token/NFT can have unlimited script, example: selling NFT, same NFT each different listing price can be seprate script.
+#### 3. One script can be added to different Token/NFTs, example: love the Token/NFT, voting recorded in database
+#### 4. One script can use mutiple Token/NFTs, example: mix your NFT with mine, click mix choose one of your NFT, get a new one which combine mine and yours.
+#### 5. Tapp doesn't have to be stand along, it can has a landing page like Buy me a beer to work together with tapp.
 
 
 
