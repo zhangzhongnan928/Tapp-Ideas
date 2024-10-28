@@ -44,7 +44,7 @@ NFT Brandextender.io - NFT holder make a tlink for others to dress up his NFT, s
 38. Goblintown (Ethereum) - Goblin Language Translator: Goblintown NFT owners create TLinks for others to translate text into "Goblin speak".AI based
 
 
-
+Ideas above are OK
 -------------------
 
 
