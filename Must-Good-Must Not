@@ -1,1 +1,22 @@
+Tapp to build
+
+Must:
+1. It's designed to be used on Twitter. User A can create a TLink of the Tapp to share on Twitter for other users (like User B) to use.
+2. It provides motivation for both User A and User B.
+3. Less than 3 pages UX for each feature (the page shows in tweet feed, a confirmation checking page after user click a button in tweet feed, a result page after transection is done)
+
+
+Good to Have:
+1. It's built for existing tokens/NFTs, allowing for easy branding.
+2. It can be built quickly (delivery in 0.5 day) using existing contracts and backend.
+3. It has the potential to go viral.
+4. It only requires the TokenScript file, with no additional development needed.
+5. Social sharing buttons to make it easier for User A to share their TLink on Twitter and other platforms.
+
+
+Must Not:
+1. More than 3 buttons(cards) in tweet feed.
+2. More than 3 days to build.
+
+
 
