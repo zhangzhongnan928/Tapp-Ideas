@@ -1,4 +1,4 @@
-# 100   Tapp Ideas for Existing Tokens/NFTs
+# If you don't have any ideas can pick one from below 
 
 - BAYC (Ethereum) - show off your Ape; Like, Share your Ape, Leaderboard.
 
@@ -44,6 +44,10 @@ NFT Brandextender.io - NFT holder make a tlink for others to dress up his NFT, s
 
 
 - Goblintown (Ethereum) - Goblin Language Translator: Goblintown NFT owners create TLinks for others to translate text into "Goblin speak".AI based
+
+
+
+
 
 
 Ideas above are OK
