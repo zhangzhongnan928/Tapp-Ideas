@@ -12,6 +12,7 @@
 
 - NFT minting
 - POAP related
+- Predection market on twitter bas e on exsting redection market like polymarket and https://limitless.exchange/
 
 - CryptoPunks (Ethereum) - Punk Trait Simulator: CryptoPunk owners create TLinks for others to temporarily try on their Punk's traits.
 
