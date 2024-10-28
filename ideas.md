@@ -1,18 +1,18 @@
 # 100   Tapp Ideas for Existing Tokens/NFTs
 
-1. BAYC (Ethereum) - show off your Ape; Like, Share your Ape, Leaderboard.
+- BAYC (Ethereum) - show off your Ape; Like, Share your Ape, Leaderboard.
 
-2. Meme Coins - Liquidity Provider Referral: Add liquidity, leaderboard, Share to earn.
+- Meme Coins - Liquidity Provider Referral: Add liquidity, leaderboard, Share to earn.
 
-8. Arbitrum (ARB) - Governance Voting Power Boost: ARB holders create TLinks for others to temporarily boost their voting power in governance.
+- Arbitrum (ARB) - Governance Voting Power Boost: ARB holders create TLinks for others to temporarily boost their voting power in governance.
 
-10. Lens Protocol (Polygon) - Follower Boost Campaign: Lens Profile owners create TLinks for others to get temporary follower count boosts.
+- Lens Protocol (Polygon) - Follower Boost Campaign: Lens Profile owners create TLinks for others to get temporary follower count boosts.
 
-11. ENS Domains (Ethereum) - Subdomain sales: ENS domain owners create TLinks for others to buy subdomains.
+- ENS Domains (Ethereum) - Subdomain sales: ENS domain owners create TLinks for others to buy subdomains.
 
-NFT minting
+- NFT minting
 
-27. CryptoPunks (Ethereum) - Punk Trait Simulator: CryptoPunk owners create TLinks for others to temporarily try on their Punk's traits.
+- CryptoPunks (Ethereum) - Punk Trait Simulator: CryptoPunk owners create TLinks for others to temporarily try on their Punk's traits.
 
 NFT Brandextender.io - NFT holder make a tlink for others to dress up his NFT, sale direvitivise 
 
@@ -22,29 +22,28 @@ NFT Brandextender.io - NFT holder make a tlink for others to dress up his NFT, s
 - What's the worst token you owned, NFT tapp as the admin account to post voting on twitter, user join, select the token he has, then sign to vote, record in database, WORST memecoins $WORST minted to voter as reward
 
 
-30. Doodles (Ethereum) - Doodle Customization Tool: Doodles owners create TLinks for others to customize and buy Doodle-inspired artwork AI based .
+- Doodles (Ethereum) - Doodle Customization Tool: Doodles owners create TLinks for others to customize and buy Doodle-inspired artwork AI based .
 
 
 
-31. Cool Cats (Ethereum) - Cat Breeding Simulator: Cool Cats owners create TLinks for others to simulate breeding with their Cool Cat. sell AI generate direvitivise
+- Cool Cats (Ethereum) - Cat Breeding Simulator: Cool Cats owners create TLinks for others to simulate breeding with their Cool Cat. sell AI generate direvitivise
 
 
 
 
 
-33. Pudgy Penguins (Ethereum) - sell AI generate direvitivise
-
-34. 
-
-35. Azuki (Ethereum) - sell AI generate direvitivise art, fight or anything
+- Pudgy Penguins (Ethereum) - sell AI generate direvitivise
 
 
-
-37. Moonbirds (Ethereum) - Nest Building Workshop: Moonbirds holders create TLinks for others to join nest building workshops.
+- Azuki (Ethereum) - sell AI generate direvitivise art, fight or anything
 
 
 
-38. Goblintown (Ethereum) - Goblin Language Translator: Goblintown NFT owners create TLinks for others to translate text into "Goblin speak".AI based
+- Moonbirds (Ethereum) - Nest Building Workshop: Moonbirds holders create TLinks for others to join nest building workshops.
+
+
+
+- Goblintown (Ethereum) - Goblin Language Translator: Goblintown NFT owners create TLinks for others to translate text into "Goblin speak".AI based
 
 
 Ideas above are OK
