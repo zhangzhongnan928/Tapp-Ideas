@@ -16,7 +16,10 @@ NFT minting
 
 NFT Brandextender.io - NFT holder make a tlink for others to dress up his NFT, sale direvitivise 
 
-
+- What's the best NFT you owned, NFT tapp as the admin account to post voting on twitter, user join, select the NFT he has, then sign to vote, record in database, BEST memecoins $BEST minted to voter as reward
+- What's the worst NFT you owned, NFT tapp as the admin account to post voting on twitter, user join, select the NFT he has, then sign to vote, record in database, WORST memecoins $WORST minted to voter as reward
+- What's the best token you owned, NFT tapp as the admin account to post voting on twitter, user join, select the token he has, then sign to vote, record in database, BEST memecoins $Best minted to voter as reward
+- What's the worst token you owned, NFT tapp as the admin account to post voting on twitter, user join, select the token he has, then sign to vote, record in database, WORST memecoins $WORST minted to voter as reward
 
 
 30. Doodles (Ethereum) - Doodle Customization Tool: Doodles owners create TLinks for others to customize and buy Doodle-inspired artwork AI based .
