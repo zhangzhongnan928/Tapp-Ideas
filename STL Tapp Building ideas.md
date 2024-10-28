@@ -15,7 +15,7 @@
 
 - CryptoPunks (Ethereum) - Punk Trait Simulator: CryptoPunk owners create TLinks for others to temporarily try on their Punk's traits.
 
-NFT Brandextender.io - NFT holder make a tlink for others to dress up his NFT, sale direvitivise 
+- NFT Brandextender.io - NFT holder make a tlink for others to dress up his NFT, sale direvitivise 
 
 - What's the best NFT you owned, NFT tapp as the admin account to post voting on twitter, user join, select the NFT he has, then sign to vote, record in database, BEST memecoins $BEST minted to voter as reward
 - What's the worst NFT you owned, NFT tapp as the admin account to post voting on twitter, user join, select the NFT he has, then sign to vote, record in database, WORST memecoins $WORST minted to voter as reward
