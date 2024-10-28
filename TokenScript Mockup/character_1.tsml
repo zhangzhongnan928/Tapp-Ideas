@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ts:token xmlns:ts="http://tokenscript.org/2024/01/tokenscript"
+          xmlns:xml="http://www.w3.org/XML/1998/namespace"
+          xsi:schemaLocation="http://tokenscript.org/2024/01/tokenscript https://www.tokenscript.org/schemas/2024-01/tokenscript.xsd"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:ethereum="urn:ethereum:constantinople"
+          name="character_1">
+    <ts:label>
+        <ts:plurals xml:lang="en">
+            <ts:string quantity="one">Rose.Love Tapp NFT</ts:string>
+            <ts:string quantity="other">Rose.Love Tapp NFTs</ts:string>
+        </ts:plurals>
+    </ts:label>
+    <ts:meta>
+        <ts:description xml:lang="en">A digital collectable 100% owned by you.
+A digital asset growing with you.
+A tapp to experience Rose.Love on different platforms.
+An account to access the full Rose.Love 💋 experience on Rose.Love.</ts:description>
+        <ts:aboutUrl xml:lang="en">Rose.Love</ts:aboutUrl>
+        <ts:iconUrl xml:lang="en">Rose.Love/icon.png</ts:iconUrl>
+    </ts:meta>
+    <ts:contract interface="erc721" name="character_1Contract">
+        <ts:address network="8453">0x48a41a17B42a3B3e4D96081b38894e90fb10F871</ts:address>
+    </ts:contract>
+    <ts:origins>
+        <ts:ethereum contract="character_1Contract"/>
+    </ts:origins>
+    <ts:cards>
+        <ts:card type="action" name="Get Free Privilege Card">
+            <ts:label>
+                <ts:string xml:lang="en">Get Free Privilege Card</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>Get Free Privilege Card</button>
+            </ts:view>
+        </ts:card>
+        <ts:card type="action" name="Share to Earn">
+            <ts:label>
+                <ts:string xml:lang="en">Share to Earn</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>Share to Earn</button>
+            </ts:view>
+        </ts:card>
+        <ts:card type="action" name="Say Hi to character_1">
+            <ts:label>
+                <ts:string xml:lang="en">Say Hi to character_1</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>Say Hi to character_1</button>
+            </ts:view>
+        </ts:card></ts:cards>
+</ts:token>
