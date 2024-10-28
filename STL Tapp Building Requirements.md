@@ -45,6 +45,9 @@ Maximum of 3 pages per feature:
 - Support multiple social platforms
 - Optimize for Twitter sharing
 
+### 6. Memecoin related
+
+
 ## Restrictions
 
 ### 1. UI Limitations
