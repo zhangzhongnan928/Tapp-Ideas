@@ -11,6 +11,7 @@
 - ENS Domains (Ethereum) - Subdomain sales: ENS domain owners create TLinks for others to buy subdomains.
 
 - NFT minting
+- POAP related
 
 - CryptoPunks (Ethereum) - Punk Trait Simulator: CryptoPunk owners create TLinks for others to temporarily try on their Punk's traits.
 
