@@ -20,7 +20,7 @@ imKey provides hardware wallets and related accessories to users through various
         <ts:iconUrl xml:lang="en">https://www.rare.shop/item/0x31b1c39ee69b8437e197b3c91a524ab2949e31a0/icon.png</ts:iconUrl>
     </ts:meta>
     <ts:contract interface="erc721" name="imKey Family PackContract">
-        <ts:address network="185">0x6F418b21aabe625192577De7720b4D27297Beb92</ts:address>
+        <ts:address network="185">0x31b1c39EE69B8437e197B3C91A524AB2949E31a0</ts:address>
     </ts:contract>
     <ts:origins>
         <ts:ethereum contract="imKey Family PackContract"/>
