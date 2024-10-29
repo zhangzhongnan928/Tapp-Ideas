@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ts:token xmlns:ts="http://tokenscript.org/2024/01/tokenscript"
+          xmlns:xml="http://www.w3.org/XML/1998/namespace"
+          xsi:schemaLocation="http://tokenscript.org/2024/01/tokenscript https://www.tokenscript.org/schemas/2024-01/tokenscript.xsd"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:ethereum="urn:ethereum:constantinople"
+          name="imKey Family Pack">
+    <ts:label>
+        <ts:plurals xml:lang="en">
+            <ts:string quantity="one">imKey Family Pack</ts:string>
+            <ts:string quantity="other">imKey Family Packs</ts:string>
+        </ts:plurals>
+    </ts:label>
+    <ts:meta>
+        <ts:description xml:lang="en">Exclusively supplied by the brand, authentic product guaranteed
+imKey is a rapidly growing company providing blockchain security products and solutions to users, ensuring secure and easy interaction with your tokens. Founded in 2018, imKey's core team comes from blockchain wallets, financial institutions, and security hardware manufacturers, with complementary backgrounds in security. At its foundation, imKey received angel investment from the globally renowned blockchain wallet imToken and has been dedicated to research in the field of token security. Today, imKey offers a range of security products, including hardware wallet and mnemonics phrase storage tools.
+
+imKey provides hardware wallets and related accessories to users through various e-commerce platforms like Shopify and Amazon. imKey hardware wallet is an offline tool for storing and managing private keys, adding an extra layer of security and protection for signing transactions. It integrates with other imToken wallets for convenient transaction signing.</ts:description>
+        <ts:aboutUrl xml:lang="en">https://www.rare.shop/item/0x31b1c39EE69B8437e197B3C91A524AB2949E31a0</ts:aboutUrl>
+        <ts:iconUrl xml:lang="en">https://www.rare.shop/item/0x31b1c39ee69b8437e197b3c91a524ab2949e31a0/icon.png</ts:iconUrl>
+    </ts:meta>
+    <ts:contract interface="erc721" name="imKey Family PackContract">
+        <ts:address network="185">0x6F418b21aabe625192577De7720b4D27297Beb92</ts:address>
+    </ts:contract>
+    <ts:origins>
+        <ts:ethereum contract="imKey Family PackContract"/>
+    </ts:origins>
+    <ts:cards>
+        <ts:card type="action" name="Purchase">
+            <ts:label>
+                <ts:string xml:lang="en">Purchase</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>Purchase</button>
+            </ts:view>
+        </ts:card>
+        <ts:card type="action" name="Share to Earn">
+            <ts:label>
+                <ts:string xml:lang="en">Share to Earn</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>Share to Earn</button>
+            </ts:view>
+        </ts:card>
+        <ts:card type="action" name="Product Detail">
+            <ts:label>
+                <ts:string xml:lang="en">Product Detail</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>Product Detail</button>
+            </ts:view>
+        </ts:card></ts:cards>
+</ts:token>
