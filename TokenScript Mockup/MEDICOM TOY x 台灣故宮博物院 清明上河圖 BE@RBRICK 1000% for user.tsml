@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ts:token xmlns:ts="http://tokenscript.org/2024/01/tokenscript"
+          xmlns:xml="http://www.w3.org/XML/1998/namespace"
+          xsi:schemaLocation="http://tokenscript.org/2024/01/tokenscript https://www.tokenscript.org/schemas/2024-01/tokenscript.xsd"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:ethereum="urn:ethereum:constantinople"
+          name="MEDICOM TOY x 台灣故宮博物院 清明上河圖 BE@RBRICK 1000% ">
+    <ts:label>
+        <ts:plurals xml:lang="en">
+            <ts:string quantity="one">MEDICOM TOY x 台灣故宮博物院 清明上河圖 BE@RBRICK 1000%</ts:string>
+            <ts:string quantity="other">MEDICOM TOY x 台灣故宮博物院 清明上河圖 BE@RBRICK 1000%s</ts:string>
+        </ts:plurals>
+    </ts:label>
+    <ts:meta>
+        <ts:description xml:lang="en">Exclusively supplied by the brand, authentic product guaranteed
+Limited to 30 items sold on RareShop.
+</ts:description>
+        <ts:aboutUrl xml:lang="en">https://www.rare.shop/item/0x863472d46a952651614F8E148b07FEC2c4a66c1C</ts:aboutUrl>
+        <ts:iconUrl xml:lang="en">https://www.rare.shop/item/0x863472d46a952651614f8e148b07fec2c4a66c1c/icon.png</ts:iconUrl>
+    </ts:meta>
+    <ts:contract interface="erc721" name="MEDICOM TOY x 台灣故宮博物院 清明上河圖 BE@RBRICK 1000% Contract">
+        <ts:address network="185">0x6F418b21aabe625192577De7720b4D27297Beb92</ts:address>
+    </ts:contract>
+    <ts:origins>
+        <ts:ethereum contract="MEDICOM TOY x 台灣故宮博物院 清明上河圖 BE@RBRICK 1000% Contract"/>
+    </ts:origins>
+    <ts:cards>
+        <ts:card type="action" name="Physical Delivery">
+            <ts:label>
+                <ts:string xml:lang="en">Physical Delivery</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>Physical Delivery</button>
+            </ts:view>
+        </ts:card>
+        <ts:card type="action" name="Exercise Privilege">
+            <ts:label>
+                <ts:string xml:lang="en">Exercise Privilege</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>Exercise Privilege</button>
+            </ts:view>
+        </ts:card>
+        <ts:card type="action" name="Speak to Designer">
+            <ts:label>
+                <ts:string xml:lang="en">Speak to Designer</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>Speak to Designer</button>
+            </ts:view>
+        </ts:card></ts:cards>
+</ts:token>
