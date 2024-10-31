@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ts:token xmlns:ts="http://tokenscript.org/2024/01/tokenscript"
+          xmlns:xml="http://www.w3.org/XML/1998/namespace"
+          xsi:schemaLocation="http://tokenscript.org/2024/01/tokenscript https://www.tokenscript.org/schemas/2024-01/tokenscript.xsd"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:ethereum="urn:ethereum:constantinople"
+          name="Kitty">
+    <ts:label>
+        <ts:plurals xml:lang="en">
+            <ts:string quantity="one">Kitty Tapp NFT</ts:string>
+            <ts:string quantity="other">Kitty Tapp NFTs</ts:string>
+        </ts:plurals>
+    </ts:label>
+    <ts:meta>
+        <ts:description xml:lang="en">Kitty knows everything about tapp. Pay to chat with me.</ts:description>
+        <ts:aboutUrl xml:lang="en">https://example.com</ts:aboutUrl>
+        <ts:iconUrl xml:lang="en">https://example.com/icon.png</ts:iconUrl>
+    </ts:meta>
+    <ts:contract interface="erc721" name="KittyContract">
+        <ts:address network="8453">0x595D007a18951C34DC3A28Db97298e5aC5aB3B91</ts:address>
+    </ts:contract>
+    <ts:origins>
+        <ts:ethereum contract="KittyContract"/>
+    </ts:origins>
+    <ts:cards>
+        <ts:card type="action" name="Pay To Chat">
+            <ts:label>
+                <ts:string xml:lang="en">Pay To Chat</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>Pay To Chat</button>
+            </ts:view>
+        </ts:card>
+        <ts:card type="action" name="Share To Earn">
+            <ts:label>
+                <ts:string xml:lang="en">Share To Earn</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>Share To Earn</button>
+            </ts:view>
+        </ts:card>
+        <ts:card type="action" name="Make Your Own Agent">
+            <ts:label>
+                <ts:string xml:lang="en">Make Your Own Agent</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>Make Your Own Agent</button>
+            </ts:view>
+        </ts:card></ts:cards>
+</ts:token>
