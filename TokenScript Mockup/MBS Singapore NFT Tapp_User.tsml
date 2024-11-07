@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ts:token xmlns:ts="http://tokenscript.org/2024/01/tokenscript"
+          xmlns:xml="http://www.w3.org/XML/1998/namespace"
+          xsi:schemaLocation="http://tokenscript.org/2024/01/tokenscript https://www.tokenscript.org/schemas/2024-01/tokenscript.xsd"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns:ethereum="urn:ethereum:constantinople"
+          name="MBS Singapore NFT Tapp">
+    <ts:label>
+        <ts:plurals xml:lang="en">
+            <ts:string quantity="one">MBS Singapore Tapp</ts:string>
+            <ts:string quantity="other">MBS Singapore Tapps</ts:string>
+        </ts:plurals>
+    </ts:label>
+    <ts:meta>
+        <ts:description xml:lang="en">历时3周，300+次尝试，只为捕捉这一瞬间的完美。
+远处繁星点点，近处灯火璀璨，天际线与倒影交织成一幅新加坡最梦幻的夜景。
+
+功能：
+- 博主1对1问答
+- 新加坡旅游景点优惠
+- 优先获得下期新加坡地标NFT发售资格</ts:description>
+        <ts:aboutUrl xml:lang="en">https://example.com</ts:aboutUrl>
+        <ts:iconUrl xml:lang="en">https://example.com/icon.png</ts:iconUrl>
+    </ts:meta>
+    <ts:contract interface="erc721" name="MBS Singapore NFT TappContract">
+        <ts:address network="8453">0x21C4eA9EDc6Ba19Cdea93D123D2de958fBD0FE90</ts:address>
+    </ts:contract>
+    <ts:origins>
+        <ts:ethereum contract="MBS Singapore NFT TappContract"/>
+    </ts:origins>
+    <ts:cards>
+        <ts:card type="action" name="提问">
+            <ts:label>
+                <ts:string xml:lang="en">提问</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>提问</button>
+            </ts:view>
+        </ts:card>
+        <ts:card type="action" name="景点优惠">
+            <ts:label>
+                <ts:string xml:lang="en">景点优惠</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>景点优惠</button>
+            </ts:view>
+        </ts:card>
+        <ts:card type="action" name="购买其他NFT">
+            <ts:label>
+                <ts:string xml:lang="en">购买其他NFT</ts:string>
+            </ts:label>
+            <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+                <button>购买其他NFT</button>
+            </ts:view>
+        </ts:card></ts:cards>
+</ts:token>
