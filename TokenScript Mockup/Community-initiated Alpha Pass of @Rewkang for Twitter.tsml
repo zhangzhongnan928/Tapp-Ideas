@@ -7,8 +7,8 @@
           name="Community-initiated Alpha Pass of @Rewkang ">
     <ts:label>
         <ts:plurals xml:lang="en">
-            <ts:string quantity="one">Community-initiated Alpha Pass of @Rewkang </ts:string>
-            <ts:string quantity="other">Community-initiated Alpha Pass of @Rewkang s</ts:string>
+            <ts:string quantity="one">Community initiated Alpha Pass of @Rewkang </ts:string>
+            <ts:string quantity="other">Community initiated Alpha Pass of @Rewkang </ts:string>
         </ts:plurals>
     </ts:label>
     <ts:meta>
