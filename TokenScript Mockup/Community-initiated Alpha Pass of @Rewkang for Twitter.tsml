@@ -49,12 +49,12 @@ Price starts at 0.01 ETH 🚀</ts:description>
                 <button>🐸 Stack Pepe ($0.0001 ETH)</button>
             </ts:view>
         </ts:card>
-        <ts:card type="action" name="🚀 Share & Get Rewarded">
+        <ts:card type="action" name="🚀 Share and Get Rewarded">
             <ts:label>
-                <ts:string xml:lang="en">🚀 Share & Get Rewarded</ts:string>
+                <ts:string xml:lang="en">🚀 Share and Get Rewarded</ts:string>
             </ts:label>
             <ts:view xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-                <button>🚀 Share & Get Rewarded</button>
+                <button>🚀 Share and Get Rewarded</button>
             </ts:view>
         </ts:card></ts:cards>
 </ts:token>
