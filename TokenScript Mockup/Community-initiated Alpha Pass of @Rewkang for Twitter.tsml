@@ -4,11 +4,11 @@
           xsi:schemaLocation="http://tokenscript.org/2024/01/tokenscript https://www.tokenscript.org/schemas/2024-01/tokenscript.xsd"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xmlns:ethereum="urn:ethereum:constantinople"
-          name="Community-initiated Alpha Pass of @Rewkang ">
+          name="Community-initiated Alpha Pass of Rewkang ">
     <ts:label>
         <ts:plurals xml:lang="en">
-            <ts:string quantity="one">Community-initiated Alpha Pass of @Rewkang </ts:string>
-            <ts:string quantity="other">Community-initiated Alpha Pass of @Rewkang s</ts:string>
+            <ts:string quantity="one">Community-initiated Alpha Pass of Rewkang </ts:string>
+            <ts:string quantity="other">Community-initiated Alpha Pass of Rewkang s</ts:string>
         </ts:plurals>
     </ts:label>
     <ts:meta>
@@ -16,8 +16,8 @@
 - Tapp, token as application 
 - First interactive NFT minted from tweet
 - Mint to unlock your digital pass with live functions
-- Future DM and alpha alert access (after @Rewkang activation)
-- Support @Rewkang directly
+- Future DM and alpha alert access (after Rewkang activation)
+- Support Rewkang directly
 - Limited to 1000 passes
 - Fair launch with bonding curve
 
@@ -26,11 +26,11 @@ Price starts at 0.01 ETH 🚀</ts:description>
         <ts:aboutUrl xml:lang="en">https://example.com</ts:aboutUrl>
         <ts:iconUrl xml:lang="en">https://pbs.twimg.com/profile_images/1786874758421983232/L06COzZ-_400x400.jpg</ts:iconUrl>
     </ts:meta>
-    <ts:contract interface="erc721" name="Community-initiated Alpha Pass of @Rewkang Contract">
+    <ts:contract interface="erc721" name="Community-initiated Alpha Pass of Rewkang Contract">
         <ts:address network="8453">0x9bf1f7C9228BAaB6fFA2d17Df5b7803eF6e585B2</ts:address>
     </ts:contract>
     <ts:origins>
-        <ts:ethereum contract="Community-initiated Alpha Pass of @Rewkang Contract"/>
+        <ts:ethereum contract="Community-initiated Alpha Pass of Rewkang Contract"/>
     </ts:origins>
     <ts:cards>
         <ts:card type="action" name="🎟️ Join Alpha Club (Community-initiated)">
